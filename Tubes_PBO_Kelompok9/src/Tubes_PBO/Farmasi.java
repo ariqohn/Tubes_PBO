@@ -10,5 +10,10 @@ package Tubes_PBO;
  * @author Naufal
  */
 public class Farmasi {
+    private string kode_obat;
+    private string nama_obat;
+    private string deskripsi_obat;
+    private string kode_pasien;
+    
     
 }
