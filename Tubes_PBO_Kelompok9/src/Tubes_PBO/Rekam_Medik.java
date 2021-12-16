@@ -10,10 +10,7 @@ package Tubes_PBO;
  * @author Naufal
  */
 public class Rekam_Medik {
-    private String kode_terapi;
-    private String nama_terapi;
-    private String deskripsi_terapi;
-    private String kode_dokter, kode_pasien;
+    private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
     
     public Rekam_Medik(String kode_terapi,String nama_terapi, String deskripsi_terapi,String kode_dokter, String kode_pasien){
         this.kode_terapi = kode_terapi;
