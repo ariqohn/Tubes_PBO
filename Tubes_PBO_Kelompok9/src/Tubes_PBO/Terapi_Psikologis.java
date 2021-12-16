@@ -10,11 +10,7 @@ package Tubes_PBO;
  * @author Naufal
  */
 public class Terapi_Psikologis {
-    private string kode_terapi;
-    private string nama_terapi;
-    private string deskripsi_terapi;
-    private string kode_dokter;
-    private string kode_pasien;
+    private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien;
     
     public void setKode_terapi(String kode_terapi){
         this.kode_terapi = kode_terapi;
@@ -52,7 +48,7 @@ public class Terapi_Psikologis {
     public void display(){
         System.out.println("Kode Terapi      :" + this.kode_terapi);
         System.out.println("Nama Terapi      :" + this.nama_terapi);
-        System.out.println("Deskripsi Terapi :" + this.deskripsi_terapi;
+        System.out.println("Deskripsi Terapi :" + this.deskripsi_terapi);
         System.out.println("Kode Dokter      :" + this.kode_dokter);
         System.out.println("Kode Pasien      :" + this.kode_pasien);
     }
