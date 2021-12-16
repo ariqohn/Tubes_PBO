@@ -10,10 +10,7 @@ package Tubes_PBO;
  * @author Naufal
  */
 public class Farmasi {
-    private string kode_obat;
-    private string nama_obat;
-    private string deskripsi_obat;
-    private string kode_pasien;
+    private String kode_obat, nama_obat,deskripsi_obat, kode_pasien;
     
     public void setKode_obat(String kode_obat){
         this.kode_obat = kode_obat;
@@ -44,7 +41,7 @@ public class Farmasi {
     public void display(){
         System.out.println("Kode Obat      :" + this.kode_obat);
         System.out.println("Nama Obat      :" + this.nama_obat);
-        System.out.println("Deskripsi Obat :" + this.deskripsi_obat;
+        System.out.println("Deskripsi Obat :" + this.deskripsi_obat);
         System.out.println("Kode Pasien    :" + this.kode_pasien);
     }
 }
