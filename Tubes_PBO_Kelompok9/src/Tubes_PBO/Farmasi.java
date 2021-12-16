@@ -42,9 +42,9 @@ public class Farmasi {
     }
     
     public void display(){
-        System.out.println("Kode Obat    :" + this.kode_obat);
-        System.out.println("Nama Obat :" + this.nama_obat);
-        System.out.println("Deskripsi Obat     :" + this.deskripsi_obat;
-        System.out.println("Kode Pasien         :" + this.kode_pasien);
+        System.out.println("Kode Obat      :" + this.kode_obat);
+        System.out.println("Nama Obat      :" + this.nama_obat);
+        System.out.println("Deskripsi Obat :" + this.deskripsi_obat;
+        System.out.println("Kode Pasien    :" + this.kode_pasien);
     }
 }
