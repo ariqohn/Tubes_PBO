@@ -37,4 +37,10 @@ public class Terapi {
     public String informasi_terapi(){
         return this.informasi_terapi;
     }
+    
+    public void display(){
+        System.out.println("Jenis Terapi       :" + this.jenis_terapi);
+        System.out.println("Deskripsi Penyakit :" + this.deskripsi_penyakit);
+        System.out.println("Jenis Penyakit     :" + this.jenis_penyakit;
+    }
 }
