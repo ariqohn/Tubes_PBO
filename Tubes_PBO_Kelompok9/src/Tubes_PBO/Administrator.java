@@ -10,5 +10,19 @@ package Tubes_PBO;
  * @author Naufal
  */
 public class Administrator {
+    private String username;
+    private String password;
+    
+    public Administrator(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+    public boolean verify_Login(String username, String password){
+        if (username==username && password==password){
+            return true;
+        } else {
+            return false;
+        }
+    }
     
 }
