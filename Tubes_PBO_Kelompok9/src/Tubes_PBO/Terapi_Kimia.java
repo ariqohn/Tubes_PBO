@@ -48,4 +48,12 @@ public class Terapi_Kimia {
     public int totalBiaya_terapi(){
         return this.totalBiaya_terapi;
     }
+    
+    public void display(){
+        System.out.println("Kode Terapi      :" + this.kode_terapi);
+        System.out.println("Nama Terapi      :" + this.nama_terapi);
+        System.out.println("Deskripsi Terapi :" + this.deskripsi_terapi;
+        System.out.println("Kode Dokter      :" + this.kode_dokter);
+        System.out.println("Kode Pasien      :" + this.kode_pasien);
+    }
 }
