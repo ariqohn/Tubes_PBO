@@ -9,7 +9,7 @@ package Tubes_PBO;
  *
  * @author Naufal
  */
-public interface Biaya_Terapi {
+interface Biaya_Terapi {
     public void totalBiayaTerapi();
     
 }

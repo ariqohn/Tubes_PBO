@@ -5,14 +5,17 @@
  */
 package Tubes_PBO;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Naufal
  */
-public class Rekam_Medik {
+public class Rekam_Medik extends Pasien{
     private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
-    
-    public Rekam_Medik(String kode_terapi,String nama_terapi, String deskripsi_terapi,String kode_dokter, String kode_pasien){
+
+    public Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String penyakit, String dokter_rujukan, LocalDate tgl_pendaftaran) {
+        super(kode_pasien, penyakit, dokter_rujukan, tgl_pendaftaran);
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;

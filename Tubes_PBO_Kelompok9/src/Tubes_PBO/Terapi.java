@@ -9,8 +9,14 @@ package Tubes_PBO;
  *
  * @author Naufal
  */
-public class Terapi {
+public abstract class Terapi {
     private String jenis_terapi, deskripsi_penyakit, jenis_penyakit;
+
+    public Terapi(String jenis_terapi, String deskripsi_penyakit, String jenis_penyakit) {
+        this.jenis_terapi = jenis_terapi;
+        this.deskripsi_penyakit = deskripsi_penyakit;
+        this.jenis_penyakit = jenis_penyakit;
+    }
     
     public void setJenis_terapi(String jenis_terapi){
         this.jenis_terapi = jenis_terapi;
@@ -32,9 +38,7 @@ public class Terapi {
         return this.jenis_penyakit;
     }
     
-    public String informasi_terapi(){
-        return this.informasi_terapi;
-    }
+    public abstract String informasi_terapi();
     
     public void display(){
         System.out.println("Jenis Terapi       :" + this.jenis_terapi);
