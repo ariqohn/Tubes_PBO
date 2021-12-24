@@ -25,11 +25,14 @@ public class Pasien {
         this.penyakit = penyakit;
         this.dokter_rujukan = dokter_rujukan;
         this.tgl_pendaftaran = tgl_pendaftaran;
-        
     }
     
     public void setKode_pasien(String kode_pasien){
         this.kode_pasien = kode_pasien;
+    }
+
+    public void setTgl_pendaftaran(LocalDate tgl_pendaftaran) {
+        this.tgl_pendaftaran = tgl_pendaftaran;
     }
     
     public String getKode_pasien(){
@@ -47,10 +50,6 @@ public class Pasien {
     public LocalDate getTgl_pendaftaran(){
         return tgl_pendaftaran;
     }
-    
-//    public String getKode_pendaftaran(){
-//        return kode_pendaftaran;
-//    }
     
     public String getPenyakit(){
         return penyakit;
