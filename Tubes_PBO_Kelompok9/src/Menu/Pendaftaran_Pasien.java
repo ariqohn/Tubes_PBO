@@ -5,10 +5,17 @@
  */
 package Menu;
 
+import Class.Pasien;
+import java.util.ArrayList;
+
 /**
  *
  * @author Naufal
  */
 public class Pendaftaran_Pasien {
+    ArrayList<Pasien> List_Pasien = new ArrayList<Pasien>();
     
+    public void input_pasien(){
+        System.out.println("");
+    }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package GUI.Update;
 
 /**
  *
@@ -79,8 +79,6 @@ public class Frame_Login extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton2.setText("Home");
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 257, 94, -1));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\ASUS\\Documents\\NetBeansProjects\\Tubes_PBO\\Tubes_PBO_Kelompok9\\src\\GUI\\Backgorund\\back_1.jpg")); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 370));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 370));

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GUI;
+package GUI.Update;
 
 /**
  *
@@ -110,8 +110,6 @@ public class Frame_Terapi_Kimia extends javax.swing.JFrame {
             }
         });
         getContentPane().add(b_next, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 91, -1));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\ASUS\\Documents\\NetBeansProjects\\Tubes_PBO\\Tubes_PBO_Kelompok9\\src\\GUI\\Backgorund\\back_1.jpg")); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 900, 500));
 
         pack();
