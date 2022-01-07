@@ -34,16 +34,16 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        k_terapi = new javax.swing.JTextField();
-        n_terapi = new javax.swing.JTextField();
-        d_terapi = new javax.swing.JTextField();
-        k_dokter = new javax.swing.JTextField();
+        kode_terapi = new javax.swing.JTextField();
+        nama_terapi = new javax.swing.JTextField();
+        deskripsi_terapi = new javax.swing.JTextField();
+        kode_dokter = new javax.swing.JTextField();
         biaya_terapi = new javax.swing.JComboBox<>();
-        k_pasien = new javax.swing.JTextField();
+        kode_pasien = new javax.swing.JTextField();
         b_home = new javax.swing.JButton();
-        b_submit = new javax.swing.JButton();
+        b_add = new javax.swing.JButton();
+        b_update = new javax.swing.JButton();
         b_delete = new javax.swing.JButton();
-        b_next = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,40 +83,45 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Terapi Kimia");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, -1, -1));
-        getContentPane().add(k_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 532, -1));
-        getContentPane().add(n_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 532, -1));
-        getContentPane().add(d_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 532, 83));
-        getContentPane().add(k_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 532, -1));
+        getContentPane().add(kode_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 532, -1));
+        getContentPane().add(nama_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 532, -1));
+        getContentPane().add(deskripsi_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 532, 83));
+        getContentPane().add(kode_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 532, -1));
 
         biaya_terapi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         biaya_terapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "150.000", "300.000", "500.000", "1.000.000", "1.500.000", "2.000.000" }));
         getContentPane().add(biaya_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 183, -1));
-        getContentPane().add(k_pasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 532, -1));
+        getContentPane().add(kode_pasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 532, -1));
 
         b_home.setBackground(new java.awt.Color(153, 153, 0));
         b_home.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         b_home.setText("Back");
         getContentPane().add(b_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 85, -1));
 
-        b_submit.setBackground(new java.awt.Color(102, 255, 255));
-        b_submit.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_submit.setText("add");
-        getContentPane().add(b_submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 110, -1));
+        b_add.setBackground(new java.awt.Color(102, 255, 255));
+        b_add.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_add.setText("add");
+        getContentPane().add(b_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 110, -1));
 
-        b_delete.setBackground(new java.awt.Color(255, 102, 102));
-        b_delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_delete.setText("update");
-        getContentPane().add(b_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 108, -1));
-
-        b_next.setBackground(new java.awt.Color(51, 255, 255));
-        b_next.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_next.setText("delete");
-        b_next.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                b_nextMouseClicked(evt);
+        b_update.setBackground(new java.awt.Color(255, 102, 102));
+        b_update.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_update.setText("update");
+        b_update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_updateActionPerformed(evt);
             }
         });
-        getContentPane().add(b_next, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 91, -1));
+        getContentPane().add(b_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 108, -1));
+
+        b_delete.setBackground(new java.awt.Color(51, 255, 255));
+        b_delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_delete.setText("delete");
+        b_delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_deleteMouseClicked(evt);
+            }
+        });
+        getContentPane().add(b_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 91, -1));
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -124,11 +129,15 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void b_nextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_nextMouseClicked
+    private void b_deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_deleteMouseClicked
         // TODO add your handling code here:
         Frame_Payment jF = new Frame_Payment();
         jF.setVisible(true);
-    }//GEN-LAST:event_b_nextMouseClicked
+    }//GEN-LAST:event_b_deleteMouseClicked
+
+    private void b_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_updateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b_updateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,12 +176,12 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b_add;
     private javax.swing.JButton b_delete;
     private javax.swing.JButton b_home;
-    private javax.swing.JButton b_next;
-    private javax.swing.JButton b_submit;
+    private javax.swing.JButton b_update;
     private javax.swing.JComboBox<String> biaya_terapi;
-    private javax.swing.JTextField d_terapi;
+    private javax.swing.JTextField deskripsi_terapi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -181,9 +190,9 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField k_dokter;
-    private javax.swing.JTextField k_pasien;
-    private javax.swing.JTextField k_terapi;
-    private javax.swing.JTextField n_terapi;
+    private javax.swing.JTextField kode_dokter;
+    private javax.swing.JTextField kode_pasien;
+    private javax.swing.JTextField kode_terapi;
+    private javax.swing.JTextField nama_terapi;
     // End of variables declaration//GEN-END:variables
 }

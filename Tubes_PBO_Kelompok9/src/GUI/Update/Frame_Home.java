@@ -51,6 +51,11 @@ public class Frame_Home extends javax.swing.JFrame {
                 btn_administratorMouseClicked(evt);
             }
         });
+        btn_administrator.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_administratorActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_administrator, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, -1, -1));
 
         btn_pasien.setBackground(new java.awt.Color(255, 0, 255));
@@ -141,6 +146,10 @@ public class Frame_Home extends javax.swing.JFrame {
     private void btn_terapiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_terapiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_terapiActionPerformed
+
+    private void btn_administratorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_administratorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_administratorActionPerformed
 
     /**
      * @param args the command line arguments

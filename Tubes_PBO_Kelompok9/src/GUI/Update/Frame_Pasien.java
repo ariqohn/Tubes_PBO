@@ -27,73 +27,70 @@ public class Frame_Pasien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton4 = new javax.swing.JButton();
+        jButton4_Back = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButton1_Pendaftaran = new javax.swing.JButton();
+        jButton2_Payment = new javax.swing.JButton();
+        jButton3_Terapi = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1_KodePasien = new javax.swing.JTextField();
+        jTextField2_Keluhan = new javax.swing.JTextField();
+        jTextField3_DokterRujukan = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 0));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton4.setText("Back");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton4_Back.setBackground(new java.awt.Color(204, 204, 0));
+        jButton4_Back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton4_Back.setText("Back");
+        jButton4_Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
+                jButton4_BackMouseClicked(evt);
             }
         });
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButton4_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton4_BackActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 103, -1));
+        getContentPane().add(jButton4_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 103, -1));
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 204));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton1.setText("Pendaftaran");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton1_Pendaftaran.setBackground(new java.awt.Color(0, 204, 204));
+        jButton1_Pendaftaran.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton1_Pendaftaran.setText("Pendaftaran");
+        jButton1_Pendaftaran.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                jButton1_PendaftaranMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 149, -1));
+        jPanel1.add(jButton1_Pendaftaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 149, -1));
 
-        jButton2.setBackground(new java.awt.Color(51, 255, 255));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton2.setText("Payment");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton2_Payment.setBackground(new java.awt.Color(51, 255, 255));
+        jButton2_Payment.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton2_Payment.setText("Payment");
+        jButton2_Payment.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                jButton2_PaymentMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 128, -1));
+        jPanel1.add(jButton2_Payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 128, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 255, 204));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton3.setText("Terapi");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton3_Terapi.setBackground(new java.awt.Color(0, 255, 204));
+        jButton3_Terapi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton3_Terapi.setText("Terapi");
+        jButton3_Terapi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                jButton3_TerapiMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 120, -1));
+        jPanel1.add(jButton3_Terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 120, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,55 +112,56 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jLabel2.setText("Kode Pasien");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
 
-        jScrollPane6.setViewportView(jTextPane4);
-
-        jPanel1.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 530, -1));
-
-        jScrollPane4.setViewportView(jTextPane2);
-
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 530, -1));
-
-        jScrollPane3.setViewportView(jTextPane1);
-
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 530, -1));
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Data Pasien");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
+
+        jTextField1_KodePasien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1_KodePasienActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1_KodePasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 520, -1));
+        jPanel1.add(jTextField2_Keluhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 520, -1));
+        jPanel1.add(jTextField3_DokterRujukan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, 520, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+    private void jButton4_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_BackMouseClicked
         // TODO add your handling code here:
         Frame_Home jF = new Frame_Home();
         jF.setVisible(true);
-    }//GEN-LAST:event_jButton4MouseClicked
+    }//GEN-LAST:event_jButton4_BackMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1_PendaftaranMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_PendaftaranMouseClicked
         // TODO add your handling code here:
         Frame_Pendaftaran jF_1 = new Frame_Pendaftaran();
         jF_1.setVisible(true);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_jButton1_PendaftaranMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void jButton2_PaymentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_PaymentMouseClicked
         // TODO add your handling code here:
         Frame_Payment jF_2 = new Frame_Payment();
         jF_2.setVisible(true);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_jButton2_PaymentMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void jButton3_TerapiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_TerapiMouseClicked
         // TODO add your handling code here:
         Frame_Terapi jF_3 = new Frame_Terapi();
         jF_3.setVisible(true);
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_jButton3_TerapiMouseClicked
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_BackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jButton4_BackActionPerformed
+
+    private void jTextField1_KodePasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_KodePasienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1_KodePasienActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,21 +199,18 @@ public class Frame_Pasien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton1_Pendaftaran;
+    private javax.swing.JButton jButton2_Payment;
+    private javax.swing.JButton jButton3_Terapi;
+    private javax.swing.JButton jButton4_Back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane4;
+    private javax.swing.JTextField jTextField1_KodePasien;
+    private javax.swing.JTextField jTextField2_Keluhan;
+    private javax.swing.JTextField jTextField3_DokterRujukan;
     // End of variables declaration//GEN-END:variables
 }
