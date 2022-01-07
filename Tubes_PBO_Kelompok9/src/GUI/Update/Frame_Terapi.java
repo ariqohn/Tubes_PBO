@@ -34,18 +34,18 @@ public class Frame_Terapi extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        d_terapi = new javax.swing.JTextField();
-        k_terapi = new javax.swing.JTextField();
-        n_terapi = new javax.swing.JTextField();
-        k_dokter = new javax.swing.JTextField();
-        k_pasien = new javax.swing.JTextField();
-        b_submit = new javax.swing.JButton();
-        b_home = new javax.swing.JButton();
-        b_next = new javax.swing.JButton();
+        deskripsi_terapi = new javax.swing.JTextField();
+        kode_terapi = new javax.swing.JTextField();
+        nama_terapi = new javax.swing.JTextField();
+        kode_dokter = new javax.swing.JTextField();
+        kode_pasien = new javax.swing.JTextField();
+        b_Add = new javax.swing.JButton();
+        b_back = new javax.swing.JButton();
+        b_delete = new javax.swing.JButton();
         j_terapi = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        b_delete = new javax.swing.JButton();
+        b_update = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -94,46 +94,46 @@ public class Frame_Terapi extends javax.swing.JFrame {
         jLabel7.setText("Terapi");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 120, 40));
 
-        d_terapi.addActionListener(new java.awt.event.ActionListener() {
+        deskripsi_terapi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                d_terapiActionPerformed(evt);
+                deskripsi_terapiActionPerformed(evt);
             }
         });
-        getContentPane().add(d_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 570, 100));
-        getContentPane().add(k_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 570, -1));
-        getContentPane().add(n_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 570, -1));
-        getContentPane().add(k_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 570, -1));
-        getContentPane().add(k_pasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 570, -1));
+        getContentPane().add(deskripsi_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 570, 100));
+        getContentPane().add(kode_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 570, -1));
+        getContentPane().add(nama_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 570, -1));
+        getContentPane().add(kode_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 570, -1));
+        getContentPane().add(kode_pasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 570, -1));
 
-        b_submit.setBackground(new java.awt.Color(51, 255, 255));
-        b_submit.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_submit.setText("add");
-        b_submit.addActionListener(new java.awt.event.ActionListener() {
+        b_Add.setBackground(new java.awt.Color(51, 255, 255));
+        b_Add.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_Add.setText("add");
+        b_Add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b_submitActionPerformed(evt);
+                b_AddActionPerformed(evt);
             }
         });
-        getContentPane().add(b_submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 110, -1));
+        getContentPane().add(b_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 110, -1));
 
-        b_home.setBackground(new java.awt.Color(153, 153, 0));
-        b_home.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_home.setText("Back");
-        b_home.addActionListener(new java.awt.event.ActionListener() {
+        b_back.setBackground(new java.awt.Color(153, 153, 0));
+        b_back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_back.setText("Back");
+        b_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b_homeActionPerformed(evt);
+                b_backActionPerformed(evt);
             }
         });
-        getContentPane().add(b_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 100, -1));
+        getContentPane().add(b_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 100, -1));
 
-        b_next.setBackground(new java.awt.Color(0, 255, 255));
-        b_next.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_next.setText("delete");
-        b_next.addMouseListener(new java.awt.event.MouseAdapter() {
+        b_delete.setBackground(new java.awt.Color(0, 255, 255));
+        b_delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_delete.setText("delete");
+        b_delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                b_nextMouseClicked(evt);
+                b_deleteMouseClicked(evt);
             }
         });
-        getContentPane().add(b_next, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, 90, -1));
+        getContentPane().add(b_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 530, 90, -1));
 
         j_terapi.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         j_terapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Terapi Kimia", "Terapi Psikologis", " " }));
@@ -147,12 +147,12 @@ public class Frame_Terapi extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(37, 41, 88));
 
-        b_delete.setBackground(new java.awt.Color(255, 102, 102));
-        b_delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_delete.setText("update");
-        b_delete.addActionListener(new java.awt.event.ActionListener() {
+        b_update.setBackground(new java.awt.Color(255, 102, 102));
+        b_update.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_update.setText("update");
+        b_update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b_deleteActionPerformed(evt);
+                b_updateActionPerformed(evt);
             }
         });
 
@@ -162,14 +162,14 @@ public class Frame_Terapi extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(663, Short.MAX_VALUE)
-                .addComponent(b_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(b_update, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(528, Short.MAX_VALUE)
-                .addComponent(b_delete)
+                .addComponent(b_update)
                 .addGap(47, 47, 47))
         );
 
@@ -178,23 +178,23 @@ public class Frame_Terapi extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void d_terapiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_d_terapiActionPerformed
+    private void deskripsi_terapiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deskripsi_terapiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_d_terapiActionPerformed
+    }//GEN-LAST:event_deskripsi_terapiActionPerformed
 
-    private void b_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_submitActionPerformed
+    private void b_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_AddActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_b_submitActionPerformed
+    }//GEN-LAST:event_b_AddActionPerformed
 
-    private void b_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_deleteActionPerformed
+    private void b_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_updateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_b_deleteActionPerformed
+    }//GEN-LAST:event_b_updateActionPerformed
 
-    private void b_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_homeActionPerformed
+    private void b_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_backActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_b_homeActionPerformed
+    }//GEN-LAST:event_b_backActionPerformed
 
-    private void b_nextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_nextMouseClicked
+    private void b_deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_deleteMouseClicked
         // TODO add your handling code here:
        String a = (String) j_terapi.getSelectedItem();
         if(a == "Terapi Kimia"){
@@ -204,7 +204,7 @@ public class Frame_Terapi extends javax.swing.JFrame {
            Frame_TerapiPsikologis jF_1 = new Frame_TerapiPsikologis();
            jF_1.setVisible(true);
         }
-    }//GEN-LAST:event_b_nextMouseClicked
+    }//GEN-LAST:event_b_deleteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -242,11 +242,11 @@ public class Frame_Terapi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b_Add;
+    private javax.swing.JButton b_back;
     private javax.swing.JButton b_delete;
-    private javax.swing.JButton b_home;
-    private javax.swing.JButton b_next;
-    private javax.swing.JButton b_submit;
-    private javax.swing.JTextField d_terapi;
+    private javax.swing.JButton b_update;
+    private javax.swing.JTextField deskripsi_terapi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -257,9 +257,9 @@ public class Frame_Terapi extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JComboBox<String> j_terapi;
-    private javax.swing.JTextField k_dokter;
-    private javax.swing.JTextField k_pasien;
-    private javax.swing.JTextField k_terapi;
-    private javax.swing.JTextField n_terapi;
+    private javax.swing.JTextField kode_dokter;
+    private javax.swing.JTextField kode_pasien;
+    private javax.swing.JTextField kode_terapi;
+    private javax.swing.JTextField nama_terapi;
     // End of variables declaration//GEN-END:variables
 }

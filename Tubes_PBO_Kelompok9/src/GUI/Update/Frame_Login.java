@@ -28,14 +28,14 @@ public class Frame_Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton1_Submit = new javax.swing.JButton();
+        jButton2_Home = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         j_status = new javax.swing.JComboBox<>();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField2_Password = new javax.swing.JTextField();
+        jTextField1_Username = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,20 +44,20 @@ public class Frame_Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton1.setText("Sumbit");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton1_Submit.setBackground(new java.awt.Color(0, 255, 255));
+        jButton1_Submit.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton1_Submit.setText("Submit");
+        jButton1_Submit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                jButton1_SubmitMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 92, -1));
+        jPanel1.add(jButton1_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 510, 92, -1));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton2.setText("Home");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 94, -1));
+        jButton2_Home.setBackground(new java.awt.Color(204, 204, 0));
+        jButton2_Home.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton2_Home.setText("Home");
+        jPanel1.add(jButton2_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 94, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,8 +76,8 @@ public class Frame_Login extends javax.swing.JFrame {
 
         j_status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pasien", "Dokter", " " }));
         jPanel1.add(j_status, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 125, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 450, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 450, -1));
+        jPanel1.add(jTextField2_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 450, -1));
+        jPanel1.add(jTextField1_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 450, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,7 +89,7 @@ public class Frame_Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1_SubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_SubmitMouseClicked
         // TODO add your handling code here:
         String a = (String) j_status.getSelectedItem();
         if(a == "Pasien"){
@@ -100,7 +100,7 @@ public class Frame_Login extends javax.swing.JFrame {
             jF_1.setVisible(true);
         }
 
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_jButton1_SubmitMouseClicked
 
     /**
      * @param args the command line arguments
@@ -138,15 +138,15 @@ public class Frame_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton1_Submit;
+    private javax.swing.JButton jButton2_Home;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField1_Username;
+    private javax.swing.JTextField jTextField2_Password;
     private javax.swing.JComboBox<String> j_status;
     // End of variables declaration//GEN-END:variables
 }
