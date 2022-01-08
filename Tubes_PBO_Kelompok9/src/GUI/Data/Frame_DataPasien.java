@@ -35,11 +35,11 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jTable_dataPasien = new javax.swing.JTable();
+        jLabel_kodePasien = new javax.swing.JLabel();
+        jButton_back = new javax.swing.JButton();
+        jLabel_namaPenyakit = new javax.swing.JLabel();
+        jLabel_dokterRujukan = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,7 +58,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Dokter Rujukan :");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_dataPasien.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -98,24 +98,24 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable_dataPasien);
 
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Kode Pasien");
+        jLabel_kodePasien.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_kodePasien.setText("Kode Pasien");
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 51));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_back.setBackground(new java.awt.Color(255, 0, 51));
+        jButton_back.setText("Back");
+        jButton_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_backActionPerformed(evt);
             }
         });
 
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Nama Penyakit");
+        jLabel_namaPenyakit.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_namaPenyakit.setText("Nama Penyakit");
 
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Dokter Rujukan");
+        jLabel_dokterRujukan.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_dokterRujukan.setText("Dokter Rujukan");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -126,11 +126,11 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(jButton_back)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel7))))
+                                .addComponent(jLabel_kodePasien))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -141,8 +141,8 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                                 .addComponent(jLabel3)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))))
+                            .addComponent(jLabel_namaPenyakit)
+                            .addComponent(jLabel_dokterRujukan))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(125, 125, 125)
@@ -159,20 +159,20 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(jButton_back))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel_kodePasien))
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                            .addComponent(jLabel_namaPenyakit)
                             .addComponent(jLabel3))
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
+                            .addComponent(jLabel_dokterRujukan)
                             .addComponent(jLabel4)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -194,9 +194,9 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_backActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,16 +265,16 @@ public class Frame_DataPasien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_dokterRujukan;
+    private javax.swing.JLabel jLabel_kodePasien;
+    private javax.swing.JLabel jLabel_namaPenyakit;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable_dataPasien;
     // End of variables declaration//GEN-END:variables
 }
