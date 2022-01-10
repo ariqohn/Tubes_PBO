@@ -12,7 +12,7 @@ package Class;
 public abstract class Terapi {
     private String jenis_terapi, deskripsi_penyakit, jenis_penyakit;
 
-    public Terapi(String jenis_terapi, String deskripsi_penyakit, String jenis_penyakit) {
+    public Terapi(String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
         this.jenis_terapi = jenis_terapi;
         this.deskripsi_penyakit = deskripsi_penyakit;
         this.jenis_penyakit = jenis_penyakit;

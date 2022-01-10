@@ -11,6 +11,10 @@ package Class;
  */
 public class Farmasi {
     private String kode_obat, nama_obat,deskripsi_obat, kode_pasien;
+
+    public Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public void setKode_obat(String kode_obat){
         this.kode_obat = kode_obat;
