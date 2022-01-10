@@ -10,15 +10,14 @@ package Class;
  * @author Naufal
  */
 public class Terapi_Psikologis extends Terapi implements Biaya_Terapi{
-    private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien;
+    private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
 
-    public Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String jenis_terapi, String deskripsi_penyakit, String jenis_penyakit) {
-        super(jenis_terapi, deskripsi_penyakit, jenis_penyakit);
+    public Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
+        super(jenis_terapi, jenis_penyakit, deskripsi_penyakit);
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;
         this.kode_dokter = kode_dokter;
-        this.kode_pasien = kode_pasien;
     }
     
     public void setKode_terapi(String kode_terapi){
@@ -44,18 +43,12 @@ public class Terapi_Psikologis extends Terapi implements Biaya_Terapi{
     public String getKode_dokter(){
         return this.kode_dokter;
     }
-
-    public String getKode_pasien() {
-        return kode_pasien;
-    }
-
     
     public void display(){
         System.out.println("Kode Terapi      :" + this.kode_terapi);
         System.out.println("Nama Terapi      :" + this.nama_terapi);
         System.out.println("Deskripsi Terapi :" + this.deskripsi_terapi);
         System.out.println("Kode Dokter      :" + this.kode_dokter);
-        System.out.println("Kode Pasien      :" + this.kode_pasien);
     }
 
     @Override
