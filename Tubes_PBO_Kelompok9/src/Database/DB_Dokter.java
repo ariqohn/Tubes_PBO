@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class DB_Dokter {
     private String kode_dokter,nama_dokter, email_dokter,spesialis;
 
+    //constructor
     public DB_Dokter(String kode_dokter, String nama_dokter, String email_dokter, String spesialis) {
         this.kode_dokter = kode_dokter;
         this.nama_dokter = nama_dokter;
@@ -26,6 +27,7 @@ public class DB_Dokter {
         this.spesialis = spesialis;
     }
     
+    //Melakukan insert database dokter
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -42,7 +44,7 @@ public class DB_Dokter {
             e.printStackTrace();
         }
     }
-    
+    // Melakukan delete database Dokter
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -60,6 +62,7 @@ public class DB_Dokter {
         }
     }
     
+    // Melakukan update database Dokter
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -77,6 +80,7 @@ public class DB_Dokter {
         }
     }
     
+    // melakukan reset database Dokter
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -94,6 +98,7 @@ public class DB_Dokter {
         }
     }
     
+    //Mengambil data dari database Dokter
     public ArrayList<Dokter> getData(){
         ArrayList<Dokter> list_dokter = new ArrayList<>();
         try {

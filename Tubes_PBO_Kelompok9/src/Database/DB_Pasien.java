@@ -22,6 +22,7 @@ public class DB_Pasien {
     private LocalDate tgl_pendaftaran;
     private Payment[] invoice;
 
+    //constructor
     public DB_Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, LocalDate tgl_pendaftaran) {
         this.kode_pasien = kode_pasien;
         this.keluhan = keluhan;
@@ -30,6 +31,7 @@ public class DB_Pasien {
         this.tgl_pendaftaran = tgl_pendaftaran;
     }
     
+    //Melakukan insert database Pasien
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -47,6 +49,7 @@ public class DB_Pasien {
         }
     }
     
+    // Melakukan delete database Pasien
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -63,7 +66,7 @@ public class DB_Pasien {
             e.printStackTrace();
         }
     }
-    
+    // Melakukan update database Pasien
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -81,6 +84,7 @@ public class DB_Pasien {
         }
     }
     
+    // melakukan reset database Pasien
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -98,6 +102,7 @@ public class DB_Pasien {
         }
     }
     
+    //Mengambil data dari database Pasien
     public ArrayList<Pasien> getData(){
         ArrayList<Pasien> list_pasien = new ArrayList<>();
         try {

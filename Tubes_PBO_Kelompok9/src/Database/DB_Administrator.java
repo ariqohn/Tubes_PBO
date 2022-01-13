@@ -19,11 +19,13 @@ import java.util.ArrayList ;
 public class DB_Administrator {
     private String username, password;
 
+    //constructor
     public DB_Administrator(String username, String password) {
         this.username = username;
         this.password = password;
     }
     
+    //Melakukan insert database administrator
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -41,6 +43,7 @@ public class DB_Administrator {
         }
     }
     
+    // Melakukan delete database administrator
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -58,6 +61,7 @@ public class DB_Administrator {
         }
     }
     
+    // Melakukan update database administrator
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -75,6 +79,7 @@ public class DB_Administrator {
         }
     }
     
+    // melakukan reset database administrator
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -92,6 +97,7 @@ public class DB_Administrator {
         }
     }
     
+    //Mengambil data dari database Administrator
     public ArrayList<Administrator> getData(){
         ArrayList<Administrator> list_administrator = new ArrayList<>();
         try {

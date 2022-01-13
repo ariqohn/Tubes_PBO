@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class DB_Farmasi {
     private String kode_obat, nama_obat, deskripsi_obat, kode_pasien;
 
+    //constructor
     public DB_Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien) {
         this.kode_obat = kode_obat;
         this.nama_obat = nama_obat;
@@ -26,6 +27,7 @@ public class DB_Farmasi {
         this.kode_pasien = kode_pasien;
     }
     
+    //Melakukan insert database Farmasi
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -43,6 +45,7 @@ public class DB_Farmasi {
         }
     }
     
+    // Melakukan delete database Farmasi
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -60,6 +63,7 @@ public class DB_Farmasi {
         }
     }
     
+    // Melakukan update database Farmasi
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -77,6 +81,7 @@ public class DB_Farmasi {
         }
     }
     
+    // melakukan reset database Farmasi
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -94,6 +99,7 @@ public class DB_Farmasi {
         }
     }
     
+    //Mengambil data dari database Farmasi
     public ArrayList<Farmasi> getData(){
         ArrayList<Farmasi> list_farmasi = new ArrayList<>();
         try {
