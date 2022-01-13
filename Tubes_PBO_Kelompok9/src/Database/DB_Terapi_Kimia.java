@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class DB_Terapi_Kimia extends Terapi{
     private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
 
+    //constructor
     public DB_Terapi_Kimia(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
         super(jenis_terapi, jenis_penyakit, deskripsi_penyakit);
         this.kode_terapi = kode_terapi;
@@ -26,6 +27,7 @@ public class DB_Terapi_Kimia extends Terapi{
         this.kode_dokter = kode_dokter;
     }
     
+    //Melakukan insert database Terapi Kimia
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -43,6 +45,7 @@ public class DB_Terapi_Kimia extends Terapi{
         }
     }
     
+    // Melakukan delete database Terapi Kimia
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -60,6 +63,7 @@ public class DB_Terapi_Kimia extends Terapi{
         }
     }
     
+    // Melakukan update database Terapi Kimia
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -77,6 +81,7 @@ public class DB_Terapi_Kimia extends Terapi{
         }
     }
     
+    // melakukan reset database Terapi Kimia
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -94,6 +99,7 @@ public class DB_Terapi_Kimia extends Terapi{
         }
     }
     
+    //Mengambil data dari database Terapi Kimia
     public ArrayList<Terapi_Kimia> getData(){
         ArrayList<Terapi_Kimia> list_terapi_kimia = new ArrayList<>();
         try {

@@ -20,6 +20,7 @@ public class DB_Payment {
     private int jumlah_tagihan, no_pembayaran;
     private String deskripsi_pembayaran, metodePembayaran;
 
+    //constructor
     public DB_Payment(int no_pembayaran, int jumlah_tagihan, String deskripsi_pembayaran, String metodePembayaran) {
         this.no_pembayaran = no_pembayaran;
         this.jumlah_tagihan = jumlah_tagihan;
@@ -27,6 +28,7 @@ public class DB_Payment {
         this.metodePembayaran = metodePembayaran;
     }
     
+    //Melakukan insert database Payment
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -44,6 +46,7 @@ public class DB_Payment {
         }
     }
     
+    // Melakukan delete database Payment
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -61,6 +64,7 @@ public class DB_Payment {
         }
     }
     
+    // Melakukan update database Payment
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -78,6 +82,7 @@ public class DB_Payment {
         }
     }
     
+    // melakukan reset database Payment
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -95,6 +100,7 @@ public class DB_Payment {
         }
     }
     
+    //Mengambil data dari database Payment
     public ArrayList<Payment> getData(){
         ArrayList<Payment> list_payment = new ArrayList<>();
         try {

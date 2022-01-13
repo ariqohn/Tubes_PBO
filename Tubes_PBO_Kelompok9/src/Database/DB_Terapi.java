@@ -19,12 +19,14 @@ import java.util.ArrayList;
 public class DB_Terapi {
     private String jenis_terapi, jenis_penyakit, deskripsi_penyakit;
 
+    //constructor
     public DB_Terapi(String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
         this.jenis_terapi = jenis_terapi;
         this.jenis_penyakit = jenis_penyakit;
         this.deskripsi_penyakit = deskripsi_penyakit;
     }
     
+    //Melakukan insert database Terapi
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -41,7 +43,7 @@ public class DB_Terapi {
             e.printStackTrace();
         }
     }
-    
+    // Melakukan delete database Terapi
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -59,6 +61,7 @@ public class DB_Terapi {
         }
     }
     
+    // Melakukan update database Terapi
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -76,6 +79,7 @@ public class DB_Terapi {
         }
     }
     
+    // melakukan reset database Terapi 
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -93,6 +97,7 @@ public class DB_Terapi {
         }
     }
     
+    //Mengambil data dari database Terapi 
     public ArrayList<Terapi> getData(){
         ArrayList<Terapi> list_terapi = new ArrayList<>();
         try {

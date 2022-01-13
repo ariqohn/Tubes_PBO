@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class DB_Terapi_Psikologis extends Terapi{
     private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
 
+    //constructor
     public DB_Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
         super(jenis_terapi, jenis_penyakit, deskripsi_penyakit);
         this.kode_terapi = kode_terapi;
@@ -26,6 +27,7 @@ public class DB_Terapi_Psikologis extends Terapi{
         this.kode_dokter = kode_dokter;
     }
     
+    //Melakukan insert database Terapi Psikologis
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -43,6 +45,7 @@ public class DB_Terapi_Psikologis extends Terapi{
         }
     }
     
+    // Melakukan delete database Terapi Psikologis
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -60,6 +63,7 @@ public class DB_Terapi_Psikologis extends Terapi{
         }
     }
     
+    // Melakukan update database Terapi Psikologis
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -77,6 +81,7 @@ public class DB_Terapi_Psikologis extends Terapi{
         }
     }
     
+    // melakukan reset database Terapi Psikologis
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -94,6 +99,7 @@ public class DB_Terapi_Psikologis extends Terapi{
         }
     }
     
+    //Mengambil data dari database Terapi Psikologis
     public ArrayList<Terapi_Psikologis> getData(){
         ArrayList<Terapi_Psikologis> list_terapi_psikologis = new ArrayList<>();
         try {

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class DB_Rekam_Medik extends Pasien{
     private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
 
+    //constructor
     public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String penyakit, String dokter_rujukan, LocalDate tgl_pendaftaran) {
         super(kode_pasien, penyakit, dokter_rujukan, tgl_pendaftaran);
         this.kode_terapi = kode_terapi;
@@ -29,6 +30,7 @@ public class DB_Rekam_Medik extends Pasien{
         this.kode_pasien = kode_pasien;
     }
     
+    //Melakukan insert database Rekam Medik
     public void insert(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -46,6 +48,7 @@ public class DB_Rekam_Medik extends Pasien{
         }
     }
     
+    // Melakukan delete database Rekam Medik
     public void delete(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -63,6 +66,7 @@ public class DB_Rekam_Medik extends Pasien{
         }
     }
     
+    // Melakukan update database Rekam Medik
     public void update(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -80,6 +84,7 @@ public class DB_Rekam_Medik extends Pasien{
         }
     }
     
+    // melakukan reset database Rekam Medik
     public void reset(){
         try {
             Connection conn = DriverManager.getConnection(
@@ -97,6 +102,7 @@ public class DB_Rekam_Medik extends Pasien{
         }
     }
     
+    //Mengambil data dari database Rekam Medik
     public ArrayList<Rekam_Medik> getData(){
         ArrayList<Rekam_Medik> list_rekam_medik = new ArrayList<>();
         try {
