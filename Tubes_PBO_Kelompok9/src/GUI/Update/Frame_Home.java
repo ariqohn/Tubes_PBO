@@ -117,25 +117,28 @@ public class Frame_Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         Frame_DataPasien jF = new Frame_DataPasien();
         jF.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btn_pasienMouseClicked
 
     private void btn_terapiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_terapiMouseClicked
         // TODO add your handling code here:
         Frame_Terapi jF = new Frame_Terapi();
         jF.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btn_terapiMouseClicked
 
     private void btn_administratorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_administratorMouseClicked
         // TODO add your handling code here:
-        Frame_Administrator jF = new Frame_Administrator();
-        jF.setVisible(true);
+        Frame_Login jF_1 = new Frame_Login();
+        jF_1.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btn_administratorMouseClicked
 
     private void btn_dokterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_dokterMouseClicked
         // TODO add your handling code here:
-           Frame_Login jF_1 = new Frame_Login();
-           jF_1.setVisible(true);
-        
+        Frame_DataDokter jF_1 = new Frame_DataDokter();
+        jF_1.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btn_dokterMouseClicked
 
     private void btn_pasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pasienActionPerformed
