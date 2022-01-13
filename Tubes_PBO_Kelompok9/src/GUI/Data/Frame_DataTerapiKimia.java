@@ -1,15 +1,26 @@
 package GUI.Data;
 
+import GUI.Update.Frame_Home;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+import Database.DB_Terapi_Kimia;
+import Class.Terapi_Kimia;
+import java.util.ArrayList;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
- * @author Zenbook
+ * @autho    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+r Zenbook
  */
 public class Frame_DataTerapiKimia extends javax.swing.JFrame {
 
@@ -36,8 +47,6 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_dataTerapiKimia = new javax.swing.JTable();
         jLabel_kodeTerapi = new javax.swing.JLabel();
         jButton_back = new javax.swing.JButton();
         jLabel_namaTerapi = new javax.swing.JLabel();
@@ -46,6 +55,8 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
         jLabel_kodePasien = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel_biayaTerapi = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1_DataTerapiKimia = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,53 +81,16 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Kode Dokter       :");
 
-        jTable_dataTerapiKimia.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Nama Terapi", "Deskripsi Terapi", "Biaya Terapi"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable_dataTerapiKimia);
-
         jLabel_kodeTerapi.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_kodeTerapi.setText("Kode Terapi");
 
         jButton_back.setBackground(new java.awt.Color(255, 0, 51));
         jButton_back.setText("Back");
+        jButton_back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_backMouseClicked(evt);
+            }
+        });
         jButton_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_backActionPerformed(evt);
@@ -140,6 +114,33 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
 
         jLabel_biayaTerapi.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_biayaTerapi.setText("Biaya");
+
+        DB_Terapi_Kimia terapi_kimia = new DB_Terapi_Kimia(null, null, null, null, null, null, null);
+        ArrayList<Terapi_Kimia> list_terapi_kimia = terapi_kimia.getData();
+        String[] Data_Jlist = new String[100];
+        int i=0;
+        for(Terapi_Kimia e:list_terapi_kimia){
+            Data_Jlist[i] = e.getNama_terapi();
+            i=i+1;
+        }
+        jList1_DataTerapiKimia.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e){
+                if (!e.getValueIsAdjusting()){
+                    for(Terapi_Kimia i:list_terapi_kimia){
+                        if(i.getNama_terapi() == jList1_DataTerapiKimia.getSelectedValue()){
+                            jLabel_namaTerapi.setText(i.getNama_terapi());
+                        }
+                    }
+                }
+            }
+        });
+        jList1_DataTerapiKimia.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = Data_Jlist;
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1_DataTerapiKimia);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -181,8 +182,8 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
                         .addContainerGap(377, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(148, 148, 148))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,9 +192,9 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jButton_back))
+                .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel_kodeTerapi))
@@ -217,10 +218,8 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_biayaTerapi)
                             .addComponent(jLabel12)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(79, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -240,6 +239,13 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
     private void jButton_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_backActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_backActionPerformed
+
+    private void jButton_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_backMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -322,8 +328,8 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_kodePasien;
     private javax.swing.JLabel jLabel_kodeTerapi;
     private javax.swing.JLabel jLabel_namaTerapi;
+    private javax.swing.JList<String> jList1_DataTerapiKimia;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable_dataTerapiKimia;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

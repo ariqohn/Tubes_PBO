@@ -5,6 +5,9 @@
  */
 package GUI.Update;
 
+import Database.DB_Terapi_Kimia;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ASUS
@@ -96,16 +99,34 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         b_home.setBackground(new java.awt.Color(153, 153, 0));
         b_home.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         b_home.setText("Back");
+        b_home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_homeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                b_homeMouseEntered(evt);
+            }
+        });
         getContentPane().add(b_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 85, -1));
 
         b_add.setBackground(new java.awt.Color(102, 255, 255));
         b_add.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         b_add.setText("add");
+        b_add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_addMouseClicked(evt);
+            }
+        });
         getContentPane().add(b_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 110, -1));
 
         b_update.setBackground(new java.awt.Color(255, 102, 102));
         b_update.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         b_update.setText("update");
+        b_update.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_updateMouseClicked(evt);
+            }
+        });
         b_update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_updateActionPerformed(evt);
@@ -131,13 +152,63 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
 
     private void b_deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_deleteMouseClicked
         // TODO add your handling code here:
-        Frame_Payment jF = new Frame_Payment();
-        jF.setVisible(true);
+        DB_Terapi_Kimia farmasi = new DB_Terapi_Kimia(
+                kode_terapi.getText(), 
+                nama_terapi.getText(), 
+                deskripsi_terapi.getText(), 
+                kode_dokter.getText(), 
+                "Terapi Kimia", 
+                "Demam", 
+                "Panas Demam"
+        );
+        farmasi.delete();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
     }//GEN-LAST:event_b_deleteMouseClicked
 
     private void b_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_updateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_b_updateActionPerformed
+
+    private void b_homeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_homeMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_b_homeMouseEntered
+
+    private void b_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_homeMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_b_homeMouseClicked
+
+    private void b_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_addMouseClicked
+        // TODO add your handling code here:
+        DB_Terapi_Kimia farmasi = new DB_Terapi_Kimia(
+                kode_terapi.getText(), 
+                nama_terapi.getText(), 
+                deskripsi_terapi.getText(), 
+                kode_dokter.getText(), 
+                "Terapi Kimia", 
+                "Demam", 
+                "Panas Demam"
+        );
+        farmasi.insert();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
+    }//GEN-LAST:event_b_addMouseClicked
+
+    private void b_updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_updateMouseClicked
+        // TODO add your handling code here:
+        DB_Terapi_Kimia farmasi = new DB_Terapi_Kimia(
+                kode_terapi.getText(), 
+                nama_terapi.getText(), 
+                deskripsi_terapi.getText(), 
+                kode_dokter.getText(), 
+                "Terapi Kimia", 
+                "Demam", 
+                "Panas Demam"
+        );
+        farmasi.update();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
+    }//GEN-LAST:event_b_updateMouseClicked
 
     /**
      * @param args the command line arguments

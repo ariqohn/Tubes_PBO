@@ -118,6 +118,11 @@ public class Frame_Terapi extends javax.swing.JFrame {
         b_back.setBackground(new java.awt.Color(153, 153, 0));
         b_back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         b_back.setText("Back");
+        b_back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_backMouseClicked(evt);
+            }
+        });
         b_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_backActionPerformed(evt);
@@ -205,6 +210,13 @@ public class Frame_Terapi extends javax.swing.JFrame {
            jF_1.setVisible(true);
         }
     }//GEN-LAST:event_b_deleteMouseClicked
+
+    private void b_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_backMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_b_backMouseClicked
 
     /**
      * @param args the command line arguments

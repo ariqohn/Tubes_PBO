@@ -5,6 +5,9 @@
  */
 package GUI.Update;
 
+import Database.DB_Dokter;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Zenbook
@@ -76,6 +79,11 @@ public class Frame_Dokter extends javax.swing.JFrame {
         });
 
         jButton1_Back.setText("Back");
+        jButton1_Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_BackMouseClicked(evt);
+            }
+        });
         jButton1_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1_BackActionPerformed(evt);
@@ -83,6 +91,11 @@ public class Frame_Dokter extends javax.swing.JFrame {
         });
 
         jButton2_Add.setText("add");
+        jButton2_Add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_AddMouseClicked(evt);
+            }
+        });
         jButton2_Add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2_AddActionPerformed(evt);
@@ -90,8 +103,18 @@ public class Frame_Dokter extends javax.swing.JFrame {
         });
 
         jButton3_Delete.setText("delete");
+        jButton3_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3_DeleteMouseClicked(evt);
+            }
+        });
 
         jButton4_Update.setText("update");
+        jButton4_Update.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4_UpdateMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -190,6 +213,52 @@ public class Frame_Dokter extends javax.swing.JFrame {
     private void jButton2_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_AddActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2_AddActionPerformed
+
+    private void jButton1_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_BackMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton1_BackMouseClicked
+
+    private void jButton2_AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_AddMouseClicked
+        // TODO add your handling code here:
+        DB_Dokter dokter = new DB_Dokter(
+                jTextField2_KodeDokter.getText(), 
+                jTextField4_NamaDokter.getText(), 
+                jTextField1_EmailDokter.getText(), 
+                jTextField3_Spesialis.getText()
+        );
+                
+        dokter.insert(); 
+        JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
+    }//GEN-LAST:event_jButton2_AddMouseClicked
+
+    private void jButton3_DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_DeleteMouseClicked
+        // TODO add your handling code here:
+        DB_Dokter dokter = new DB_Dokter(
+                jTextField2_KodeDokter.getText(), 
+                jTextField4_NamaDokter.getText(), 
+                jTextField1_EmailDokter.getText(), 
+                jTextField3_Spesialis.getText()
+        );
+                
+        dokter.delete();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
+    }//GEN-LAST:event_jButton3_DeleteMouseClicked
+
+    private void jButton4_UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_UpdateMouseClicked
+        // TODO add your handling code here:
+        DB_Dokter dokter = new DB_Dokter(
+                jTextField2_KodeDokter.getText(), 
+                jTextField4_NamaDokter.getText(), 
+                jTextField1_EmailDokter.getText(), 
+                jTextField3_Spesialis.getText()
+        );
+                
+        dokter.update();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
+    }//GEN-LAST:event_jButton4_UpdateMouseClicked
 
     /**
      * @param args the command line arguments

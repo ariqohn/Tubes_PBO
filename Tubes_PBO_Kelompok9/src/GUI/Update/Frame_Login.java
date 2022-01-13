@@ -57,6 +57,11 @@ public class Frame_Login extends javax.swing.JFrame {
         jButton2_Home.setBackground(new java.awt.Color(204, 204, 0));
         jButton2_Home.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton2_Home.setText("Home");
+        jButton2_Home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_HomeMouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton2_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 94, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -101,6 +106,13 @@ public class Frame_Login extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton1_SubmitMouseClicked
+
+    private void jButton2_HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_HomeMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2_HomeMouseClicked
 
     /**
      * @param args the command line arguments

@@ -13,7 +13,10 @@ public class Farmasi {
     private String kode_obat, nama_obat,deskripsi_obat, kode_pasien;
 
     public Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.kode_obat = kode_obat;
+        this.nama_obat = nama_obat;
+        this.deskripsi_obat = deskripsi_obat;
+        this.kode_pasien = kode_pasien;
     }
     
     public void setKode_obat(String kode_obat){

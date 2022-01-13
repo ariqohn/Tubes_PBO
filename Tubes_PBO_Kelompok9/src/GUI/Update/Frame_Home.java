@@ -122,7 +122,7 @@ public class Frame_Home extends javax.swing.JFrame {
 
     private void btn_terapiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_terapiMouseClicked
         // TODO add your handling code here:
-        Frame_Terapi jF = new Frame_Terapi();
+        Frame_DataFarmasi jF = new Frame_DataFarmasi();
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_btn_terapiMouseClicked

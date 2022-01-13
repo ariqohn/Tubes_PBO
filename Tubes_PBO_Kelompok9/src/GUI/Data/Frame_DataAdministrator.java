@@ -1,5 +1,7 @@
 package GUI.Data;
 
+import GUI.Update.Frame_Home;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -100,6 +102,11 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
 
         jButton_back.setBackground(new java.awt.Color(255, 0, 51));
         jButton_back.setText("Back");
+        jButton_back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton_backMouseClicked(evt);
+            }
+        });
         jButton_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_backActionPerformed(evt);
@@ -175,6 +182,13 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
     private void jButton_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_backActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_backActionPerformed
+
+    private void jButton_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_backMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton_backMouseClicked
 
     /**
      * @param args the command line arguments

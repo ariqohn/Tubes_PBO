@@ -58,6 +58,11 @@ public class Frame_Pendaftaran extends javax.swing.JFrame {
         jLabel1.setText("PENDAFTARAN");
 
         jButton1_Back.setText("Back");
+        jButton1_Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_BackMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -202,6 +207,13 @@ public class Frame_Pendaftaran extends javax.swing.JFrame {
     private void jButton4_UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_UpdateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4_UpdateActionPerformed
+
+    private void jButton1_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_BackMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton1_BackMouseClicked
 
     /**
      * @param args the command line arguments

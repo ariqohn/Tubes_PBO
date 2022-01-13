@@ -176,22 +176,32 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1_BackMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2_Add">
           <Properties>
             <Property name="text" type="java.lang.String" value="add"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2_AddMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton3_Delete">
           <Properties>
             <Property name="text" type="java.lang.String" value="delete"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton3_DeleteMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4_Update">
           <Properties>
             <Property name="text" type="java.lang.String" value="update"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton4_UpdateMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4_UpdateActionPerformed"/>
           </Events>
         </Component>
