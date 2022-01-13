@@ -113,7 +113,7 @@ public class DB_Terapi {
                 this.jenis_penyakit = rs.getString("jenis_penyakit");
                 this.deskripsi_penyakit = rs.getString("deskripsi_penyakit");
                 
-                list_terapi.add(new Terapi(jenis_terapi, jenis_penyakit, deskripsi_penyakit));
+                //list_terapi.add(new Terapi(jenis_terapi, jenis_penyakit, deskripsi_penyakit));
              }
             stmt.close();
             conn.close();

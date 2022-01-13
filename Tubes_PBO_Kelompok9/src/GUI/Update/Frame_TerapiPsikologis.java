@@ -5,6 +5,9 @@
  */
 package GUI.Update;
 
+import Database.DB_Terapi_Psikologis;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ASUS
@@ -108,11 +111,21 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         jButton1_Back.setBackground(new java.awt.Color(153, 153, 0));
         jButton1_Back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton1_Back.setText("Back");
+        jButton1_Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_BackMouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton1_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 104, -1));
 
         jButton2_Delete.setBackground(new java.awt.Color(255, 51, 51));
         jButton2_Delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton2_Delete.setText("Delete");
+        jButton2_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_DeleteMouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton2_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 109, -1));
 
         jButton3_Update.setBackground(new java.awt.Color(51, 255, 255));
@@ -128,6 +141,11 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         jButton4_Add.setBackground(new java.awt.Color(51, 255, 255));
         jButton4_Add.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton4_Add.setText("add");
+        jButton4_Add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4_AddMouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton4_Add, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 115, -1));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 900, 480));
 
@@ -143,13 +161,59 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
 
     private void jButton3_UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_UpdateMouseClicked
         // TODO add your handling code here:
-        Frame_Payment jF = new Frame_Payment();
-        jF.setVisible(true);
+        DB_Terapi_Psikologis farmasi = new DB_Terapi_Psikologis(
+                jTextField1_KodeTerapi.getText(), 
+                jTextField2_NamaTerapi.getText(), 
+                jTextField3_Deskripsi.getText(), 
+                jTextField4_KodeDokter.getText(), 
+                "Terapi Kimia", 
+                "Demam", 
+                "Panas Demam"
+        );
+        farmasi.update();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_jButton3_UpdateMouseClicked
 
     private void jTextField1_KodeTerapiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_KodeTerapiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1_KodeTerapiActionPerformed
+
+    private void jButton1_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_BackMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton1_BackMouseClicked
+
+    private void jButton4_AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_AddMouseClicked
+        // TODO add your handling code here:
+        DB_Terapi_Psikologis farmasi = new DB_Terapi_Psikologis(
+                jTextField1_KodeTerapi.getText(), 
+                jTextField2_NamaTerapi.getText(), 
+                jTextField3_Deskripsi.getText(), 
+                jTextField4_KodeDokter.getText(), 
+                "Terapi Kimia", 
+                "Demam", 
+                "Panas Demam"
+        );
+        farmasi.insert();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
+    }//GEN-LAST:event_jButton4_AddMouseClicked
+
+    private void jButton2_DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_DeleteMouseClicked
+        // TODO add your handling code here:
+        DB_Terapi_Psikologis farmasi = new DB_Terapi_Psikologis(
+                jTextField1_KodeTerapi.getText(), 
+                jTextField2_NamaTerapi.getText(), 
+                jTextField3_Deskripsi.getText(), 
+                jTextField4_KodeDokter.getText(), 
+                "Terapi Kimia", 
+                "Demam", 
+                "Panas Demam"
+        );
+        farmasi.delete();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
+    }//GEN-LAST:event_jButton2_DeleteMouseClicked
 
     /**
      * @param args the command line arguments

@@ -6,6 +6,11 @@ package GUI.Data;
  * and open the template in the editor.
  */
 
+import Database.DB_Terapi_Psikologis;
+import Class.Terapi_Psikologis;
+import java.util.ArrayList;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -36,8 +41,6 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_dataTerapiPsikologis = new javax.swing.JTable();
         jLabel_kodeTerapi = new javax.swing.JLabel();
         jButton_back = new javax.swing.JButton();
         jLabel_namaTerapi = new javax.swing.JLabel();
@@ -46,6 +49,8 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
         jLabel_kodePasien = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel_biayaTerapi = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1_DataTerapiPsikologis = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,48 +74,6 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Kode Dokter       :");
-
-        jTable_dataTerapiPsikologis.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Nama Terapi", "Deskripsi Terapi", "Biaya Terapi"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable_dataTerapiPsikologis);
 
         jLabel_kodeTerapi.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_kodeTerapi.setText("Kode Terapi");
@@ -140,6 +103,33 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
 
         jLabel_biayaTerapi.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_biayaTerapi.setText("Biaya");
+
+        DB_Terapi_Psikologis terapi_psikologis = new DB_Terapi_Psikologis(null, null, null, null, null, null, null);
+        ArrayList<Terapi_Psikologis> list_terapi_psikologis = terapi_psikologis.getData();
+        String[] Data_Jlist = new String[100];
+        int i=0;
+        for(Terapi_Psikologis e:list_terapi_psikologis){
+            Data_Jlist[i] = e.getNama_terapi();
+            i=i+1;
+        }
+        jList1_DataTerapiPsikologis.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e){
+                if (!e.getValueIsAdjusting()){
+                    for(Terapi_Psikologis i:list_terapi_psikologis){
+                        if(i.getNama_terapi() == jList1_DataTerapiPsikologis.getSelectedValue()){
+                            jLabel_namaTerapi.setText(i.getNama_terapi());
+                        }
+                    }
+                }
+            }
+        });
+        jList1_DataTerapiPsikologis.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = Data_Jlist;
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1_DataTerapiPsikologis);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -176,13 +166,12 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                             .addComponent(jLabel_biayaTerapi))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(104, 104, 104)
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(302, 302, 302)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,9 +180,9 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jButton_back))
+                .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel_kodeTerapi))
@@ -217,10 +206,8 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_biayaTerapi)
                             .addComponent(jLabel12)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -322,8 +309,8 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_kodePasien;
     private javax.swing.JLabel jLabel_kodeTerapi;
     private javax.swing.JLabel jLabel_namaTerapi;
+    private javax.swing.JList<String> jList1_DataTerapiPsikologis;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable_dataTerapiPsikologis;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

@@ -135,6 +135,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
         // TODO add your handling code here:
         Frame_Home jF = new Frame_Home();
         jF.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_jButton4_BackMouseClicked
 
     private void jButton1_PendaftaranMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_PendaftaranMouseClicked

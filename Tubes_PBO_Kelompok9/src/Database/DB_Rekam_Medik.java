@@ -10,17 +10,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
  *
  * @author kamil
  */
-public class DB_Rekam_Medik {
+public class DB_Rekam_Medik extends Pasien{
     private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
 
     //constructor
-    public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien) {
+    public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String penyakit, String dokter_rujukan, LocalDate tgl_pendaftaran) {
+        super(kode_pasien, penyakit, dokter_rujukan, tgl_pendaftaran);
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;
@@ -118,7 +120,7 @@ public class DB_Rekam_Medik {
                 this.kode_dokter = rs.getString("kode_dokter");
                 this.kode_pasien = rs.getString("kode_pasien");
                 
-                list_rekam_medik.add(new Rekam_Medik(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien));
+                list_rekam_medik.add(new Rekam_Medik(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien, sql, kode_pasien, LocalDate.MIN));
              }
             stmt.close();
             conn.close();
@@ -129,10 +131,10 @@ public class DB_Rekam_Medik {
     }
     
     public static void main(String[] args) {
-        DB_Rekam_Medik test = new DB_Rekam_Medik("TK01", "Diathermy", "tes tes", "SPA01", "PAS01");
-        test.reset();
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Rekam_Medik test = new DB_Rekam_Medik(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien, penyakit, dokter_rujukan, LocalDate.MIN);
+//        test.reset();
+//        System.out.println();
+//        System.out.println("berhasil");
     }
     
 }

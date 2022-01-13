@@ -5,6 +5,9 @@
  */
 package GUI.Update;
 
+import Database.DB_Rekam_Medik;
+import java.time.LocalDate;
+
 /**
  *
  * @author Zenbook
@@ -68,12 +71,32 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
         jLabel6.setText("Kode Dokter       :");
 
         jButton1_Back.setText("Back");
+        jButton1_Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_BackMouseClicked(evt);
+            }
+        });
 
         jButton2_Add.setText("add");
+        jButton2_Add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_AddMouseClicked(evt);
+            }
+        });
 
         jButton3_Delete.setText("delete");
+        jButton3_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3_DeleteMouseClicked(evt);
+            }
+        });
 
         jButton4_Update.setText("update");
+        jButton4_Update.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4_UpdateMouseClicked(evt);
+            }
+        });
         jButton4_Update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4_UpdateActionPerformed(evt);
@@ -164,6 +187,36 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
     private void jButton4_UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_UpdateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4_UpdateActionPerformed
+
+    private void jButton1_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_BackMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton1_BackMouseClicked
+
+    private void jButton2_AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_AddMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2_AddMouseClicked
+
+    private void jButton3_DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_DeleteMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3_DeleteMouseClicked
+
+    private void jButton4_UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_UpdateMouseClicked
+        // TODO add your handling code here:
+//        DB_Rekam_Medik rekam_medik = new DB_Rekam_Medik(
+//                kode_terapi, 
+//                nama_terapi, 
+//                deskripsi_terapi, 
+//                kode_dokter, 
+//                kode_pasien, 
+//                penyakit, 
+//                dokter_rujukan, 
+//                LocalDate.MIN)
+//        farmasi.update();
+//        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
+    }//GEN-LAST:event_jButton4_UpdateMouseClicked
 
     /**
      * @param args the command line arguments

@@ -40,6 +40,7 @@ public class DB_Farmasi {
             stmt.execute(sql);
             stmt.close();
             conn.close();
+            System.out.println("Done");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,7 +129,11 @@ public class DB_Farmasi {
     
     public static void main(String[] args) {
         DB_Farmasi test = new DB_Farmasi("OB01", "ULTRAFLU", "Meredakan demam", "PAS01");
-        test.reset();
+        for (Farmasi e:test.getData()){
+            Object[] obj = new Object[2];
+            obj[0] = e.getKode_obat();
+            obj[1] = e.getNama_obat();
+        }
         System.out.println();
         System.out.println("berhasil");
     }

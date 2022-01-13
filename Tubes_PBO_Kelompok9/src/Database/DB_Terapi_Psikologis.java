@@ -15,11 +15,12 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Terapi_Psikologis {
+public class DB_Terapi_Psikologis extends Terapi{
     private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
 
     //constructor
-    public DB_Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter) {
+    public DB_Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
+        super(jenis_terapi, jenis_penyakit, deskripsi_penyakit);
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;
@@ -115,7 +116,7 @@ public class DB_Terapi_Psikologis {
                 this.deskripsi_terapi = rs.getString("deskripsi_terapi");
                 this.kode_dokter = rs.getString("kode_dokter");
                 
-                list_terapi_psikologis.add(new Terapi_Psikologis(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter));
+                list_terapi_psikologis.add(new Terapi_Psikologis(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_terapi, kode_terapi, deskripsi_terapi));
              }
             stmt.close();
             conn.close();
@@ -126,10 +127,15 @@ public class DB_Terapi_Psikologis {
     }
     
     public static void main(String[] args) {
-        DB_Terapi_Psikologis test = new DB_Terapi_Psikologis("TP05", "Hipnoteraphy", "tes tes", "SPP01");
-        test.reset();
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Terapi_Psikologis test = new DB_Terapi_Psikologis("TP05", "Hipnoteraphy", "tes tes", "SPP01");
+//        test.reset();
+//        System.out.println();
+//        System.out.println("berhasil");
+    }
+
+    @Override
+    public String informasi_terapi() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
