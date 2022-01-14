@@ -31,49 +31,34 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         kode_terapi = new javax.swing.JTextField();
-        nama_terapi = new javax.swing.JTextField();
-        deskripsi_terapi = new javax.swing.JTextField();
-        kode_dokter = new javax.swing.JTextField();
         b_home = new javax.swing.JButton();
-        b_add = new javax.swing.JButton();
-        b_update = new javax.swing.JButton();
-        b_delete = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton1_reset = new javax.swing.JButton();
         jtextField_biaya_terapi = new javax.swing.JTextField();
+        b_add = new javax.swing.JButton();
+        b_delete = new javax.swing.JButton();
+        b_update = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        kode_dokter = new javax.swing.JTextField();
+        deskripsi_terapi = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        nama_terapi = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Kode Terapi");
+        jLabel1.setText("Kode Terapi        :");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nama Terapi");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Deskripsi");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 66, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Kode Dokter");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Biaya Terapi");
+        jLabel6.setText("Biaya Terapi       :");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -81,9 +66,6 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         jLabel7.setText("Terapi Kimia");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, -1, -1));
         getContentPane().add(kode_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 532, -1));
-        getContentPane().add(nama_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 532, -1));
-        getContentPane().add(deskripsi_terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 532, 83));
-        getContentPane().add(kode_dokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 532, -1));
 
         b_home.setBackground(new java.awt.Color(153, 153, 0));
         b_home.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -98,6 +80,16 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         });
         getContentPane().add(b_home, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 85, -1));
 
+        jPanel1.setBackground(new java.awt.Color(37, 41, 88));
+
+        jButton1_reset.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
+
         b_add.setBackground(new java.awt.Color(102, 255, 255));
         b_add.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         b_add.setText("add");
@@ -106,7 +98,15 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
                 b_addMouseClicked(evt);
             }
         });
-        getContentPane().add(b_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 110, -1));
+
+        b_delete.setBackground(new java.awt.Color(51, 255, 255));
+        b_delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        b_delete.setText("delete");
+        b_delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_deleteMouseClicked(evt);
+            }
+        });
 
         b_update.setBackground(new java.awt.Color(255, 102, 102));
         b_update.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -121,48 +121,78 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
                 b_updateActionPerformed(evt);
             }
         });
-        getContentPane().add(b_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 520, 108, -1));
 
-        b_delete.setBackground(new java.awt.Color(51, 255, 255));
-        b_delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        b_delete.setText("delete");
-        b_delete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                b_deleteMouseClicked(evt);
-            }
-        });
-        getContentPane().add(b_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 91, -1));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Kode Dokter      :");
 
-        jPanel1.setBackground(new java.awt.Color(37, 41, 88));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Deskripsi             :");
 
-        jButton1_reset.setText("reset");
-        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1_resetMouseClicked(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Nama Terapi       :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(256, 256, 256)
-                .addComponent(jButton1_reset)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(231, Short.MAX_VALUE)
-                .addComponent(jtextField_biaya_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(231, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(b_add, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(77, 77, 77)
+                                .addComponent(jButton1_reset)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(b_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(46, 46, 46)
+                                .addComponent(b_update, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtextField_biaya_terapi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(nama_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(kode_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(deskripsi_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(37, 37, 37))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(442, Short.MAX_VALUE)
+                .addContainerGap(196, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nama_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(deskripsi_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(kode_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
                 .addComponent(jtextField_biaya_terapi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addComponent(jButton1_reset)
-                .addGap(60, 60, 60))
+                .addGap(73, 73, 73)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(b_add)
+                    .addComponent(b_delete)
+                    .addComponent(jButton1_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(b_update))
+                .addGap(35, 35, 35))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));

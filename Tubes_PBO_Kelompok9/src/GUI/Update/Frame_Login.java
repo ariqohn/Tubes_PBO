@@ -74,12 +74,12 @@ public class Frame_Login extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Password");
+        jLabel3.setText("Password   :");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Username");
+        jLabel2.setText("Username   :");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
         jPanel1.add(jTextField2_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 450, -1));
         jPanel1.add(jTextField1_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 450, -1));

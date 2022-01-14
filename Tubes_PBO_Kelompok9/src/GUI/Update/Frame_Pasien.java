@@ -36,7 +36,6 @@ public class Frame_Pasien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton4_Back = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton2_Payment = new javax.swing.JButton();
         jButton3_Terapi = new javax.swing.JButton();
@@ -57,24 +56,10 @@ public class Frame_Pasien extends javax.swing.JFrame {
         jButton1_reset = new javax.swing.JButton();
         jButton3_Delete = new javax.swing.JButton();
         jButton4_Update = new javax.swing.JButton();
+        jButton4_Back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton4_Back.setBackground(new java.awt.Color(204, 204, 0));
-        jButton4_Back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton4_Back.setText("Back");
-        jButton4_Back.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4_BackMouseClicked(evt);
-            }
-        });
-        jButton4_Back.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4_BackActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, 103, -1));
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -97,7 +82,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton3_TerapiMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton3_Terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 120, -1));
+        jPanel1.add(jButton3_Terapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 130, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,7 +156,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton1_resetMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton1_reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 500, -1, -1));
+        jPanel1.add(jButton1_reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, -1, -1));
 
         jButton3_Delete.setText("delete");
         jButton3_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -179,7 +164,7 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton3_DeleteMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton3_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, -1, -1));
+        jPanel1.add(jButton3_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, -1, -1));
 
         jButton4_Update.setText("update");
         jButton4_Update.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -192,7 +177,22 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jButton4_UpdateActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 500, -1, -1));
+        jPanel1.add(jButton4_Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 500, -1, -1));
+
+        jButton4_Back.setBackground(new java.awt.Color(204, 204, 0));
+        jButton4_Back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton4_Back.setText("Back");
+        jButton4_Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4_BackMouseClicked(evt);
+            }
+        });
+        jButton4_Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4_BackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 103, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
