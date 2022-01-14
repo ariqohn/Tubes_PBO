@@ -51,7 +51,7 @@ public class Terapi_Kimia extends Terapi implements Biaya_Terapi{
 
     @Override
     public void totalBiayaTerapi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override

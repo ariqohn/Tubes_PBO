@@ -13,6 +13,8 @@ import Class.Administrator;
 import GUI.Update.Frame_Administrator;
 import GUI.Update.Frame_Login;
 import java.util.ArrayList;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -40,7 +42,7 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jList1_DataAdminstrator = new javax.swing.JList<>();
         jLabel4_Nama = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -60,12 +62,34 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username      :");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        DB_Administrator admin = new DB_Administrator(null, null);
+        ArrayList<Administrator> list_admin = admin.getData();
+        String[] Data_Jlist = new String[100];
+        int i =0;
+        for(Administrator e:list_admin){
+            Data_Jlist[i] = e.getUsername();
+            i=i+1;
+        }
+
+        jList1_DataAdminstrator.addListSelectionListener(new ListSelectionListener(){
+            @Override
+            public void valueChanged(ListSelectionEvent e){
+                if (!e.getValueIsAdjusting()){
+                    for(Administrator i:list_admin){
+                        if(i.getUsername() == jList1_DataAdminstrator.getSelectedValue()){
+                            jLabel_username.setText(i.getUsername());
+                            jLabel_password.setText(i.getPassword());
+                        }
+                    }
+                }
+            }
+        });
+        jList1_DataAdminstrator.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = Data_Jlist;
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList1);
+        jScrollPane2.setViewportView(jList1_DataAdminstrator);
 
         jLabel4_Nama.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4_Nama.setText("Nama");
@@ -277,7 +301,7 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel_password;
     private javax.swing.JLabel jLabel_username;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList1_DataAdminstrator;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

@@ -174,7 +174,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Dokter dokter = new DB_Dokter(null, null, null, null);&#xa;ArrayList&lt;Dokter&gt; list_dokter = dokter.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Dokter e:list_dokter){&#xa;    Data_Jlist[i] = e.getNama_dokter();&#xa;    i=i+1;&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Dokter dokter = new DB_Dokter(null, null, null, null);&#xa;ArrayList&lt;Dokter&gt; list_dokter = dokter.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Dokter e:list_dokter){&#xa;    Data_Jlist[i] = e.getNama_dokter();&#xa;    i=i+1;&#xa;}&#xa;&#xa;jList1_DataDokter.addListSelectionListener(new ListSelectionListener(){&#xa;    @Override&#xa;    public void valueChanged(ListSelectionEvent e){&#xa;        if(!e.getValueIsAdjusting()){&#xa;            for(Dokter i:list_dokter){&#xa;                if(i.getNama_dokter() == jList1_DataDokter.getSelectedValue()){&#xa;                    jLabel_namaDokter.setText(i.getNama_dokter());&#xa;                    jLabel_emailDokter.setText(i.getEmail_dokter());&#xa;                    jLabel_spesialis.setText(i.getSpesialis());&#xa;                    jLabel_kodeDokter.setText(i.getKode_dokter());&#xa;                }&#xa;            }&#xa;        }&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>

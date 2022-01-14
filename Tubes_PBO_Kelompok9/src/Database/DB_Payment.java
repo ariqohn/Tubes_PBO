@@ -54,7 +54,7 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "DELETE FROM payment WHERE no_pembayaran='"+no_pembayaran+"'";
+            String sql = "DELETE FROM payment WHERE noPembayaran='"+no_pembayaran+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -72,7 +72,7 @@ public class DB_Payment {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "UPDATE payment SET jumlah_tagihan = '"+jumlah_tagihan+"' WHERE no_pembayaran = '"+no_pembayaran+"'";
+            String sql = "UPDATE payment SET jumlah_tagihan = '"+jumlah_tagihan+"' WHERE noPembayaran = '"+no_pembayaran+"'";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -112,12 +112,12 @@ public class DB_Payment {
             String sql = "SELECT * FROM payment";
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()){
-                this.no_pembayaran = rs.getInt("no_pembayaran");
+                this.no_pembayaran = rs.getInt("noPembayaran");
                 this.jumlah_tagihan = rs.getInt("jumlah_tagihan");
                 this.deskripsi_pembayaran = rs.getString("deskripsi_pembayaran");
                 this.metodePembayaran = rs.getString("metodePembayaran");
                 
-                list_payment.add(new Payment(no_pembayaran, jumlah_tagihan, deskripsi_pembayaran, metodePembayaran));
+                list_payment.add(new Payment(jumlah_tagihan, no_pembayaran, deskripsi_pembayaran, metodePembayaran));
              }
             stmt.close();
             conn.close();

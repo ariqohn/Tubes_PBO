@@ -123,6 +123,10 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                     for(Terapi_Psikologis i:list_terapi_psikologis){
                         if(i.getNama_terapi() == jList1_DataTerapiPsikologis.getSelectedValue()){
                             jLabel_namaTerapi.setText(i.getNama_terapi());
+                            jLabel_deskripsiTerapi.setText(i.getDeskripsi_terapi());
+                            jLabel_kodeDokter.setText(i.getKode_dokter());
+                            jLabel_kodeTerapi.setText(i.getKode_terapi());
+
                         }
                     }
                 }
@@ -223,7 +227,7 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
                             .addComponent(jLabel_biayaTerapi)
                             .addComponent(jLabel12)))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(78, 78, 78))
         );

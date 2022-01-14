@@ -1,8 +1,13 @@
 package GUI.Data;
 
+import Database.DB_Rekam_Medik;
 import GUI.Update.Frame_Home;
 import GUI.Update.Frame_Login;
 import GUI.Update.Frame_RekamMedik;
+import Class.Rekam_Medik;
+import java.util.ArrayList;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -67,8 +72,16 @@ public class Frame_DataRekamMedik extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Deskripsi Terapi :");
 
+        DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null);
+        ArrayList<Rekam_Medik> list_rekamMedik = rekamMedik.getData();
+        String[] Data_Jlist = new String[100];
+        int i=0;
+        for(Rekam_Medik e:list_rekamMedik){
+            Data_Jlist[i] = e.getKode_pasien();
+            i = i+1;
+        }
         jList1_DataRekamMedik.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = Data_Jlist;
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });

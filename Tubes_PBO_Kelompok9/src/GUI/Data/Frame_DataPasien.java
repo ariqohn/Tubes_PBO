@@ -7,7 +7,6 @@ import GUI.Update.Frame_Login;
 import GUI.Update.Frame_Pasien;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import static java.time.temporal.TemporalQueries.localDate;
 import java.util.ArrayList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -268,6 +267,13 @@ public class Frame_DataPasien extends javax.swing.JFrame {
 
     private void jButton_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton_backMouseClicked
         // TODO add your handling code here:
+        Frame_Home jF_2 = new Frame_Home();
+        jF_2.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton_backMouseClicked
+
+    private void jButton2_editMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_editMouseClicked
+        // TODO add your handling code here:
         Frame_Login jF = new Frame_Login();
         System.out.println(jF.get_status());
         if (jF.get_status() == false){
@@ -278,13 +284,6 @@ public class Frame_DataPasien extends javax.swing.JFrame {
             jF_1.setVisible(true);
             setVisible(false);
         }
-    }//GEN-LAST:event_jButton_backMouseClicked
-
-    private void jButton2_editMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_editMouseClicked
-        // TODO add your handling code here:
-        Frame_Login jF_2 = new Frame_Login();
-        jF_2.setVisible(true);
-        setVisible(false);
     }//GEN-LAST:event_jButton2_editMouseClicked
 
     /**

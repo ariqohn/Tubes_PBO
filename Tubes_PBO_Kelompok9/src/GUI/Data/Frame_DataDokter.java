@@ -6,6 +6,8 @@ import Class.Dokter;
 import GUI.Update.Frame_Dokter;
 import GUI.Update.Frame_Login;
 import java.util.ArrayList;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -71,6 +73,22 @@ public class Frame_DataDokter extends javax.swing.JFrame {
             Data_Jlist[i] = e.getNama_dokter();
             i=i+1;
         }
+
+        jList1_DataDokter.addListSelectionListener(new ListSelectionListener(){
+            @Override
+            public void valueChanged(ListSelectionEvent e){
+                if(!e.getValueIsAdjusting()){
+                    for(Dokter i:list_dokter){
+                        if(i.getNama_dokter() == jList1_DataDokter.getSelectedValue()){
+                            jLabel_namaDokter.setText(i.getNama_dokter());
+                            jLabel_emailDokter.setText(i.getEmail_dokter());
+                            jLabel_spesialis.setText(i.getSpesialis());
+                            jLabel_kodeDokter.setText(i.getKode_dokter());
+                        }
+                    }
+                }
+            }
+        });
         jList1_DataDokter.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = Data_Jlist;
             public int getSize() { return strings.length; }

@@ -35,21 +35,19 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jTextField1_KodeTerapi = new javax.swing.JTextField();
         jTextField2_NamaTerapi = new javax.swing.JTextField();
         jTextField3_Deskripsi = new javax.swing.JTextField();
         jTextField4_KodeDokter = new javax.swing.JTextField();
-        jTextField5_KodePasien = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jButton1_Back = new javax.swing.JButton();
-        jButton2_Delete = new javax.swing.JButton();
         jButton3_Update = new javax.swing.JButton();
         jButton4_Add = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jButton1_reset = new javax.swing.JButton();
+        jTextField4_BiayaTerapi = new javax.swing.JTextField();
+        jButton2_Delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,11 +77,6 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         jLabel5.setText("Kode Dokter");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Kode Pasien");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
-
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Biaya Terapi");
@@ -98,16 +91,6 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         getContentPane().add(jTextField2_NamaTerapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 510, -1));
         getContentPane().add(jTextField3_Deskripsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 510, 90));
         getContentPane().add(jTextField4_KodeDokter, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 510, -1));
-        getContentPane().add(jTextField5_KodePasien, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 510, -1));
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "150.000", "300.000", "500.000", "1.000.000", "1.500.000", "2.000.000" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 165, -1));
 
         jButton1_Back.setBackground(new java.awt.Color(153, 153, 0));
         jButton1_Back.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -118,16 +101,6 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 104, -1));
-
-        jButton2_Delete.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2_Delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton2_Delete.setText("Delete");
-        jButton2_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2_DeleteMouseClicked(evt);
-            }
-        });
-        getContentPane().add(jButton2_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 530, 109, -1));
 
         jButton3_Update.setBackground(new java.awt.Color(51, 255, 255));
         jButton3_Update.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -153,10 +126,23 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
 
         jButton1_reset.setText("reset");
 
+        jButton2_Delete.setBackground(new java.awt.Color(255, 51, 51));
+        jButton2_Delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton2_Delete.setText("Delete");
+        jButton2_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_DeleteMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 216, Short.MAX_VALUE)
+                .addComponent(jTextField4_BiayaTerapi, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -164,16 +150,22 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
                         .addComponent(jLabel8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(227, 227, 227)
-                        .addComponent(jButton1_reset)))
-                .addGap(431, 431, 431))
+                        .addComponent(jButton1_reset)
+                        .addGap(95, 95, 95)
+                        .addComponent(jButton2_Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 507, Short.MAX_VALUE)
-                .addComponent(jButton1_reset)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 431, Short.MAX_VALUE)
+                .addComponent(jTextField4_BiayaTerapi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1_reset)
+                    .addComponent(jButton2_Delete))
                 .addGap(51, 51, 51))
         );
 
@@ -181,10 +173,6 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton3_UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_UpdateMouseClicked
         // TODO add your handling code here:
@@ -284,20 +272,18 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
     private javax.swing.JButton jButton2_Delete;
     private javax.swing.JButton jButton3_Update;
     private javax.swing.JButton jButton4_Add;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1_KodeTerapi;
     private javax.swing.JTextField jTextField2_NamaTerapi;
     private javax.swing.JTextField jTextField3_Deskripsi;
+    private javax.swing.JTextField jTextField4_BiayaTerapi;
     private javax.swing.JTextField jTextField4_KodeDokter;
-    private javax.swing.JTextField jTextField5_KodePasien;
     // End of variables declaration//GEN-END:variables
 }
