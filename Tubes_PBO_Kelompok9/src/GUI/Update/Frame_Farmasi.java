@@ -45,6 +45,8 @@ public class Frame_Farmasi extends javax.swing.JFrame {
         jButton3_Delete = new javax.swing.JButton();
         jButton4_Update = new javax.swing.JButton();
         jButton1_reset = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4_HargaObat = new javax.swing.JTextField();
 
         jTextField2.setText("jTextField2");
 
@@ -125,11 +127,23 @@ public class Frame_Farmasi extends javax.swing.JFrame {
         });
 
         jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Harga Obat    :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(288, 288, 288))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,11 +176,12 @@ public class Frame_Farmasi extends javax.swing.JFrame {
                                     .addComponent(jTextField5_KodeObat, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
                                     .addComponent(jTextField3_NamaObat)
                                     .addComponent(jTextField4_KodePasien))
-                                .addGap(0, 0, Short.MAX_VALUE))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(288, 288, 288))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(40, 40, 40)
+                        .addComponent(jTextField4_HargaObat)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +209,11 @@ public class Frame_Farmasi extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField4_KodePasien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextField4_HargaObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2_Add)
                     .addComponent(jButton3_Delete)
@@ -243,7 +262,8 @@ public class Frame_Farmasi extends javax.swing.JFrame {
                 jTextField5_KodeObat.getText(), 
                 jTextField3_NamaObat.getText(), 
                 jTextField1_DeskripsiObat.getText(), 
-                jTextField4_KodePasien.getText()
+                jTextField4_KodePasien.getText(),
+                jTextField4_HargaObat.getText()
         );
         farmasi.insert(); 
         JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
@@ -255,7 +275,8 @@ public class Frame_Farmasi extends javax.swing.JFrame {
                 jTextField5_KodeObat.getText(), 
                 jTextField3_NamaObat.getText(), 
                 jTextField1_DeskripsiObat.getText(), 
-                jTextField4_KodePasien.getText()
+                jTextField4_KodePasien.getText(),
+                jTextField4_HargaObat.getText()
         );
         farmasi.delete();
         JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
@@ -267,7 +288,8 @@ public class Frame_Farmasi extends javax.swing.JFrame {
                 jTextField5_KodeObat.getText(), 
                 jTextField3_NamaObat.getText(), 
                 jTextField1_DeskripsiObat.getText(), 
-                jTextField4_KodePasien.getText()
+                jTextField4_KodePasien.getText(),
+                jTextField4_HargaObat.getText()
         );
         farmasi.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
@@ -279,6 +301,19 @@ public class Frame_Farmasi extends javax.swing.JFrame {
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton1_BackMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+        DB_Farmasi farmasi = new DB_Farmasi(
+                jTextField5_KodeObat.getText(), 
+                jTextField3_NamaObat.getText(), 
+                jTextField1_DeskripsiObat.getText(), 
+                jTextField4_KodePasien.getText(),
+                jTextField4_HargaObat.getText()
+        );
+        farmasi.reset();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Direset..");
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments
@@ -327,10 +362,12 @@ public class Frame_Farmasi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1_DeskripsiObat;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3_NamaObat;
+    private javax.swing.JTextField jTextField4_HargaObat;
     private javax.swing.JTextField jTextField4_KodePasien;
     private javax.swing.JTextField jTextField5_KodeObat;
     // End of variables declaration//GEN-END:variables

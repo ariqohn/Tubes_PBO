@@ -107,7 +107,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jLabel_dokterRujukan.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_dokterRujukan.setText("Dokter Rujukan");
 
-        DB_Pasien pasien = new DB_Pasien(null, null, null, null, null, null);
+        DB_Pasien pasien = new DB_Pasien(null, null, null, null, null, null, null);
         ArrayList<Pasien> list_pasien = pasien.getData();
         String[] Data_Jlist = new String[100];
         int i = 0;

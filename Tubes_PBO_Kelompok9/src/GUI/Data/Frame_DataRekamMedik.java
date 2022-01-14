@@ -72,7 +72,7 @@ public class Frame_DataRekamMedik extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Deskripsi Terapi :");
 
-        DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null);
+        DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null, null);
         ArrayList<Rekam_Medik> list_rekamMedik = rekamMedik.getData();
         String[] Data_Jlist = new String[100];
         int i=0;

@@ -17,17 +17,26 @@ import java.time.LocalDate;
 public class Pasien {
     private String kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien;
     private LocalDate tgl_pendaftaran;
+    private Integer noPembayaran;
     //private Payment[] invoice;
 
-    public Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
+    public Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
         this.kode_pasien = kode_pasien;
         this.keluhan = keluhan;
         this.dokter_rujukan = dokter_rujukan;
         this.kode_terapi = kode_terapi;
         this.nama_pasien = nama_pasien;
         this.tgl_pendaftaran = tgl_pendaftaran;
+        this.noPembayaran = noPembayaran;
     }
 
+    public Integer getNoPembayaran() {
+        return noPembayaran;
+    }
+
+    public void setNoPembayaran(Integer noPembayaran) {
+        this.noPembayaran = noPembayaran;
+    }
     
     public void setKode_pasien(String kode_pasien){
         this.kode_pasien = kode_pasien;

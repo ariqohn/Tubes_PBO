@@ -108,7 +108,7 @@ public class Frame_DataTerapiPsikologis extends javax.swing.JFrame {
         jLabel_biayaTerapi.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_biayaTerapi.setText("Biaya");
 
-        DB_Terapi_Psikologis terapi_psikologis = new DB_Terapi_Psikologis(null, null, null, null, null, null, null);
+        DB_Terapi_Psikologis terapi_psikologis = new DB_Terapi_Psikologis(null, null, null, null, null);
         ArrayList<Terapi_Psikologis> list_terapi_psikologis = terapi_psikologis.getData();
         String[] Data_Jlist = new String[100];
         int i=0;

@@ -188,7 +188,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null);&#xa;ArrayList&lt;Rekam_Medik&gt; list_rekamMedik = rekamMedik.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i=0;&#xa;for(Rekam_Medik e:list_rekamMedik){&#xa;    Data_Jlist[i] = e.getKode_pasien();&#xa;    i = i+1;&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Rekam_Medik rekamMedik = new DB_Rekam_Medik(null, null, null, null, null, null, null);&#xa;ArrayList&lt;Rekam_Medik&gt; list_rekamMedik = rekamMedik.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i=0;&#xa;for(Rekam_Medik e:list_rekamMedik){&#xa;    Data_Jlist[i] = e.getKode_pasien();&#xa;    i = i+1;&#xa;}"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>

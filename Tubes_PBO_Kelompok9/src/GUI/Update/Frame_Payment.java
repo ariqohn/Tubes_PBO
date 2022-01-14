@@ -106,6 +106,11 @@ public class Frame_Payment extends javax.swing.JFrame {
         });
 
         jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -251,6 +256,18 @@ public class Frame_Payment extends javax.swing.JFrame {
         payment.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_jButton4_UpdateMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+        DB_Payment payment = new DB_Payment(
+                Integer.parseInt(jTextField2_NoPembayaran.getText()), 
+                Integer.parseInt(jTextField1_JumlahTagihan.getText()),
+                jTextField4_DeskripsiPembayaran.getText(), 
+                jTextField3_MetodePembayaran.getText()
+        );      
+        payment.reset();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments

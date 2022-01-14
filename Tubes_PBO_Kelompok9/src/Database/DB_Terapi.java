@@ -16,14 +16,15 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Terapi {
-    private String jenis_terapi, jenis_penyakit, deskripsi_penyakit;
+public class DB_Terapi{
+    private String jenis_terapi, jenis_penyakit, deskripsi_penyakit, kode_terapi;
 
     //constructor
-    public DB_Terapi(String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
+    public DB_Terapi(String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit, String kode_terapi) {
         this.jenis_terapi = jenis_terapi;
         this.jenis_penyakit = jenis_penyakit;
         this.deskripsi_penyakit = deskripsi_penyakit;
+        this.kode_terapi = kode_terapi;
     }
     
     //Melakukan insert database Terapi
@@ -34,7 +35,7 @@ public class DB_Terapi {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO terapi VALUES('"+jenis_terapi+"', '"+jenis_penyakit+"', '"+deskripsi_penyakit+"')";
+            String sql = "INSERT INTO terapi VALUES('"+kode_terapi+"','"+jenis_terapi+"', '"+jenis_penyakit+"', '"+deskripsi_penyakit+"')";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -112,6 +113,7 @@ public class DB_Terapi {
                 this.jenis_terapi = rs.getString("jenis_terapi");
                 this.jenis_penyakit = rs.getString("jenis_penyakit");
                 this.deskripsi_penyakit = rs.getString("deskripsi_penyakit");
+                this.kode_terapi = rs.getString("kode_terapi");
                 
                 //list_terapi.add(new Terapi(jenis_terapi, jenis_penyakit, deskripsi_penyakit));
              }
@@ -124,10 +126,10 @@ public class DB_Terapi {
     }
     
     public static void main(String[] args) {
-            DB_Terapi test = new DB_Terapi("Kimia", "Umum", "Demam");
-        test.reset();
-        System.out.println();
-        System.out.println("berhasil");
+//            DB_Terapi test = new DB_Terapi("Kimia", "Umum", "Demam");
+//        test.reset();
+//        System.out.println();
+//        System.out.println("berhasil");
     }
     
 }

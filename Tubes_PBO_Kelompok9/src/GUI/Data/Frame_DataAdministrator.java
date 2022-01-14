@@ -62,7 +62,7 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username      :");
 
-        DB_Administrator admin = new DB_Administrator(null, null);
+        DB_Administrator admin = new DB_Administrator(null, null, null);
         ArrayList<Administrator> list_admin = admin.getData();
         String[] Data_Jlist = new String[100];
         int i =0;

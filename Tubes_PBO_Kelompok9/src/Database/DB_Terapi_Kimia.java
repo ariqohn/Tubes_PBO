@@ -15,18 +15,20 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Terapi_Kimia extends Terapi{
+public class DB_Terapi_Kimia {
     private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
+    private Integer biaya_terapi;
 
     //constructor
-    public DB_Terapi_Kimia(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
-        super(jenis_terapi, jenis_penyakit, deskripsi_penyakit);
+
+    public DB_Terapi_Kimia(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, Integer biaya_terapi) {
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;
         this.kode_dokter = kode_dokter;
+        this.biaya_terapi = biaya_terapi;
     }
-    
+
     //Melakukan insert database Terapi Kimia
     public void insert(){
         try {
@@ -116,7 +118,7 @@ public class DB_Terapi_Kimia extends Terapi{
                 this.deskripsi_terapi = rs.getString("deskripsi_terapi");
                 this.kode_dokter = rs.getString("kode_dokter");
                 
-                list_terapi_kimia.add(new Terapi_Kimia(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_terapi, deskripsi_terapi, kode_terapi));
+                list_terapi_kimia.add(new Terapi_Kimia(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, biaya_terapi, "Kimia", null, null));
              }
             stmt.close();
             conn.close();
@@ -133,7 +135,6 @@ public class DB_Terapi_Kimia extends Terapi{
 //        System.out.println("berhasil");
     }
 
-    @Override
     public String informasi_terapi() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

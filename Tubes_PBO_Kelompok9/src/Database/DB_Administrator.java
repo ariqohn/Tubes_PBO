@@ -17,13 +17,15 @@ import java.util.ArrayList ;
  * @author kamil
  */
 public class DB_Administrator {
-    private String username, password;
+    private String username, password, nama_admin;
 
     //constructor
-    public DB_Administrator(String username, String password) {
+
+    public DB_Administrator(String username, String password, String nama_admin) {
         this.username = username;
         this.password = password;
-    }
+        this.nama_admin = nama_admin;
+    }    
     
     //Melakukan insert database administrator
     public void insert(){
@@ -33,7 +35,7 @@ public class DB_Administrator {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO administrator VALUES('"+username+"', '"+password+"')";
+            String sql = "INSERT INTO administrator VALUES('"+username+"', '"+password+"', '"+nama_admin+"')";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -111,8 +113,9 @@ public class DB_Administrator {
             while(rs.next()){
                 this.username = rs.getString("username");
                 this.password = rs.getString("password");
+                this.nama_admin = rs.getString("nama_admin");
                 
-                list_administrator.add(new Administrator(username, password));
+                list_administrator.add(new Administrator(username, password, nama_admin));
              }
             stmt.close();
             conn.close();
@@ -123,10 +126,10 @@ public class DB_Administrator {
     }
     
     public static void main(String[] args) {
-        DB_Administrator test = new DB_Administrator("admin1", "admin1");
-        test.reset();
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Administrator test = new DB_Administrator("admin1", "admin1", "admin1");
+//        test.reset();
+//        System.out.println();
+//        System.out.println("berhasil");
     }
 
 }

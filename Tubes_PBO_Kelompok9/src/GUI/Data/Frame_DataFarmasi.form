@@ -161,7 +161,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Farmasi farmasi = new DB_Farmasi(null, null, null, null);&#xa;ArrayList&lt;Farmasi&gt; list_farmasi = farmasi.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Farmasi e:list_farmasi){&#xa;    Data_Jlist[i] = e.getNama_obat();&#xa;    i=i+1;&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Farmasi farmasi = new DB_Farmasi(null, null, null, null, null);&#xa;ArrayList&lt;Farmasi&gt; list_farmasi = farmasi.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Farmasi e:list_farmasi){&#xa;    Data_Jlist[i] = e.getNama_obat();&#xa;    i=i+1;&#xa;}"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>

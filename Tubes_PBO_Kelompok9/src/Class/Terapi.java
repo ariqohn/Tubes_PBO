@@ -10,12 +10,21 @@ package Class;
  * @author Naufal
  */
 public abstract class Terapi {
-    private String jenis_terapi, deskripsi_penyakit, jenis_penyakit;
+    private String jenis_terapi, deskripsi_penyakit, jenis_penyakit, kode_terapi;
 
-    public Terapi(String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
+    public Terapi(String jenis_terapi, String deskripsi_penyakit, String jenis_penyakit, String kode_terapi) {
         this.jenis_terapi = jenis_terapi;
         this.deskripsi_penyakit = deskripsi_penyakit;
         this.jenis_penyakit = jenis_penyakit;
+        this.kode_terapi = kode_terapi;
+    }
+
+    public String getKode_terapi() {
+        return kode_terapi;
+    }
+
+    public void setKode_terapi(String kode_terapi) {
+        this.kode_terapi = kode_terapi;
     }
     
     public void setJenis_terapi(String jenis_terapi){

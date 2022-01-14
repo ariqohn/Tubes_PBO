@@ -16,17 +16,13 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Farmasi {
-    private String kode_obat, nama_obat, deskripsi_obat, kode_pasien;
+public class DB_Farmasi extends Farmasi{
+    private String kode_obat, nama_obat,deskripsi_obat, kode_pasien, harga_obat;
 
-    //constructor
-    public DB_Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien) {
-        this.kode_obat = kode_obat;
-        this.nama_obat = nama_obat;
-        this.deskripsi_obat = deskripsi_obat;
-        this.kode_pasien = kode_pasien;
+    public DB_Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien, String harga_obat) {
+        super(kode_obat, nama_obat, deskripsi_obat, kode_pasien, harga_obat);
     }
-    
+      
     //Melakukan insert database Farmasi
     public void insert(){
         try {
@@ -35,7 +31,7 @@ public class DB_Farmasi {
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO farmasi VALUES('"+kode_obat+"', '"+nama_obat+"', '"+deskripsi_obat+"', '"+kode_pasien+"')";
+            String sql = "INSERT INTO farmasi VALUES('"+kode_obat+"', '"+nama_obat+"', '"+deskripsi_obat+"', '"+kode_pasien+"', '"+harga_obat+"')";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -117,7 +113,7 @@ public class DB_Farmasi {
                 this.deskripsi_obat = rs.getString("deskripsi_obat");
                 this.kode_pasien = rs.getString("kode_pasien");
                 
-                list_farmasi.add(new Farmasi(kode_obat, nama_obat, deskripsi_obat, kode_pasien));
+                list_farmasi.add(new Farmasi(kode_obat, nama_obat, deskripsi_obat, kode_pasien, harga_obat));
              }
             stmt.close();
             conn.close();
@@ -128,13 +124,13 @@ public class DB_Farmasi {
     }
     
     public static void main(String[] args) {
-        DB_Farmasi test = new DB_Farmasi("OB01", "ULTRAFLU", "Meredakan demam", "PAS01");
-        for (Farmasi e:test.getData()){
-            Object[] obj = new Object[2];
-            obj[0] = e.getKode_obat();
-            obj[1] = e.getNama_obat();
-        }
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Farmasi test = new DB_Farmasi("OB01", "ULTRAFLU", "Meredakan demam", "PAS01");
+//        for (Farmasi e:test.getData()){
+//            Object[] obj = new Object[2];
+//            obj[0] = e.getKode_obat();
+//            obj[1] = e.getNama_obat();
+//        }
+//        System.out.println();
+//        System.out.println("berhasil");
     }
 }

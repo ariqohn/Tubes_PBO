@@ -56,7 +56,7 @@ public class Frame_DataFarmasi extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 
-        DB_Farmasi farmasi = new DB_Farmasi(null, null, null, null);
+        DB_Farmasi farmasi = new DB_Farmasi(null, null, null, null, null);
         ArrayList<Farmasi> list_farmasi = farmasi.getData();
         String[] Data_Jlist = new String[100];
         int i = 0;

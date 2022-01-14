@@ -125,6 +125,11 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 
         jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
 
         jButton2_Delete.setBackground(new java.awt.Color(255, 51, 51));
         jButton2_Delete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -149,9 +154,9 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
                         .addGap(369, 369, 369)
                         .addComponent(jLabel8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
+                        .addGap(232, 232, 232)
                         .addComponent(jButton1_reset)
-                        .addGap(95, 95, 95)
+                        .addGap(90, 90, 90)
                         .addComponent(jButton2_Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -181,9 +186,7 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
                 jTextField2_NamaTerapi.getText(), 
                 jTextField3_Deskripsi.getText(), 
                 jTextField4_KodeDokter.getText(), 
-                "Terapi Kimia", 
-                "Demam", 
-                "Panas Demam"
+                Integer.parseInt(jTextField4_BiayaTerapi.getText())
         );
         farmasi.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
@@ -207,9 +210,7 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
                 jTextField2_NamaTerapi.getText(), 
                 jTextField3_Deskripsi.getText(), 
                 jTextField4_KodeDokter.getText(), 
-                "Terapi Kimia", 
-                "Demam", 
-                "Panas Demam"
+                Integer.parseInt(jTextField4_BiayaTerapi.getText())
         );
         farmasi.insert();
         JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
@@ -222,13 +223,24 @@ public class Frame_TerapiPsikologis extends javax.swing.JFrame {
                 jTextField2_NamaTerapi.getText(), 
                 jTextField3_Deskripsi.getText(), 
                 jTextField4_KodeDokter.getText(), 
-                "Terapi Kimia", 
-                "Demam", 
-                "Panas Demam"
+                Integer.parseInt(jTextField4_BiayaTerapi.getText())
         );
         farmasi.delete();
         JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
     }//GEN-LAST:event_jButton2_DeleteMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+        DB_Terapi_Psikologis farmasi = new DB_Terapi_Psikologis(
+                jTextField1_KodeTerapi.getText(), 
+                jTextField2_NamaTerapi.getText(), 
+                jTextField3_Deskripsi.getText(), 
+                jTextField4_KodeDokter.getText(), 
+                Integer.parseInt(jTextField4_BiayaTerapi.getText())
+        );
+        farmasi.reset();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments

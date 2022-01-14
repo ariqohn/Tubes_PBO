@@ -118,7 +118,7 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
         jLabel_biayaTerapi.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_biayaTerapi.setText("Biaya");
 
-        DB_Terapi_Kimia terapi_kimia = new DB_Terapi_Kimia(null, null, null, null, null, null, null);
+        DB_Terapi_Kimia terapi_kimia = new DB_Terapi_Kimia(null, null, null, null, null);
         ArrayList<Terapi_Kimia> list_terapi_kimia = terapi_kimia.getData();
         String[] Data_Jlist = new String[100];
         int i=0;

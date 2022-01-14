@@ -14,11 +14,10 @@ import java.time.LocalDate;
 public class Rekam_Medik extends Pasien{
     private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
 
-    public Rekam_Medik(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
-        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran);
+    public Rekam_Medik(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
+        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran, noPembayaran);
     }
-
-    
+ 
     public void setKode_terapi(String kode_terapi){
         this.kode_terapi = kode_terapi;
     }

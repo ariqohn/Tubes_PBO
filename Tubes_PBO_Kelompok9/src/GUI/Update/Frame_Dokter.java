@@ -117,6 +117,11 @@ public class Frame_Dokter extends javax.swing.JFrame {
         });
 
         jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -264,6 +269,19 @@ public class Frame_Dokter extends javax.swing.JFrame {
         dokter.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_jButton4_UpdateMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+        DB_Dokter dokter = new DB_Dokter(
+            jTextField2_KodeDokter.getText(),
+            jTextField4_NamaDokter.getText(),
+            jTextField1_EmailDokter.getText(),
+            jTextField3_Spesialis.getText()
+        );
+
+        dokter.reset();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Direset..");
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments

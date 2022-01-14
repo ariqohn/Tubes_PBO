@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import javax.swing.JOptionPane;
 import GUI.Data.Frame_DataTerapi;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 /**
  *
@@ -243,7 +244,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField3_DokterRujukan.getText(), 
                 jTextField3_KodeTerapi.getText(), 
                 jTextField1_NamaPasien.getText(), 
-                LocalDate.now()
+                LocalDate.now(),
+                null
         );
         farmasi.insert(); 
         JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
@@ -257,7 +259,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField3_DokterRujukan.getText(), 
                 jTextField3_KodeTerapi.getText(), 
                 jTextField1_NamaPasien.getText(), 
-                LocalDate.now()
+                LocalDate.now(),
+                null
         );
         farmasi.reset();
         JOptionPane.showMessageDialog(null, "Data Berhasil Direset..");
@@ -271,7 +274,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField3_DokterRujukan.getText(), 
                 jTextField3_KodeTerapi.getText(), 
                 jTextField1_NamaPasien.getText(), 
-                LocalDate.now()
+                LocalDate.now(),
+                null
         );
         farmasi.delete();
         JOptionPane.showMessageDialog(null, "Data Berhasil DiHapus..");
@@ -285,7 +289,8 @@ public class Frame_Pasien extends javax.swing.JFrame {
                 jTextField3_DokterRujukan.getText(), 
                 jTextField3_KodeTerapi.getText(), 
                 jTextField1_NamaPasien.getText(), 
-                LocalDate.now()
+                LocalDate.now(),
+                null
         );
         farmasi.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");

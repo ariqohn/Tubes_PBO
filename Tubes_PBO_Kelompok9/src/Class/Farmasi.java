@@ -10,13 +10,22 @@ package Class;
  * @author Naufal
  */
 public class Farmasi {
-    private String kode_obat, nama_obat,deskripsi_obat, kode_pasien;
+    private String kode_obat, nama_obat,deskripsi_obat, kode_pasien, harga_obat;
 
-    public Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien) {
+    public Farmasi(String kode_obat, String nama_obat, String deskripsi_obat, String kode_pasien, String harga_obat) {
         this.kode_obat = kode_obat;
         this.nama_obat = nama_obat;
         this.deskripsi_obat = deskripsi_obat;
         this.kode_pasien = kode_pasien;
+        this.harga_obat = harga_obat;
+    }
+
+    public String getHarga_obat() {
+        return harga_obat;
+    }
+
+    public void setHarga_obat(String harga_obat) {
+        this.harga_obat = harga_obat;
     }
     
     public void setKode_obat(String kode_obat){

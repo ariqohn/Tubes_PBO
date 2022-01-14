@@ -136,6 +136,11 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 
         jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -172,9 +177,7 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
                 nama_terapi.getText(), 
                 deskripsi_terapi.getText(), 
                 kode_dokter.getText(), 
-                "Terapi Kimia", 
-                "Demam", 
-                "Panas Demam"
+                Integer.parseInt(jtextField_biaya_terapi.getText())
         );
         farmasi.delete();
         JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
@@ -202,9 +205,7 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
                 nama_terapi.getText(), 
                 deskripsi_terapi.getText(), 
                 kode_dokter.getText(), 
-                "Terapi Kimia", 
-                "Demam", 
-                "Panas Demam"
+                Integer.parseInt(jtextField_biaya_terapi.getText())
         );
         farmasi.insert();
         JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
@@ -217,13 +218,24 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
                 nama_terapi.getText(), 
                 deskripsi_terapi.getText(), 
                 kode_dokter.getText(), 
-                "Terapi Kimia", 
-                "Demam", 
-                "Panas Demam"
+                Integer.parseInt(jtextField_biaya_terapi.getText())
         );
         farmasi.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_b_updateMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+        DB_Terapi_Kimia farmasi = new DB_Terapi_Kimia(
+                kode_terapi.getText(), 
+                nama_terapi.getText(), 
+                deskripsi_terapi.getText(), 
+                kode_dokter.getText(), 
+                Integer.parseInt(jtextField_biaya_terapi.getText())
+        );
+        farmasi.reset();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Direset..");
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments

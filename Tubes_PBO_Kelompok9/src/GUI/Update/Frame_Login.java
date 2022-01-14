@@ -98,7 +98,7 @@ public class Frame_Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         String username = jTextField1_Username.getText();
         String password = jTextField2_Password.getText();
-        DB_Administrator DB_admin = new DB_Administrator(null, null);
+        DB_Administrator DB_admin = new DB_Administrator(null, null, null);
         ArrayList<Administrator> admin = DB_admin.getData();
         for (Administrator e: admin){
             if (username.equals(e.getUsername()) && password.equals(e.getPassword())){

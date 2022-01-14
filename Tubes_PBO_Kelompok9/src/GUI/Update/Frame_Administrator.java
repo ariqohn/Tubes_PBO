@@ -220,6 +220,7 @@ public class Frame_Administrator extends javax.swing.JFrame {
         // TODO add your handling code here:
         DB_Administrator admin = new DB_Administrator(
             jTextField4_username.getText(),
+            jTextField4_username.getText(),
             jTextField1_password.getText()
         );
 
@@ -235,6 +236,7 @@ public class Frame_Administrator extends javax.swing.JFrame {
         // TODO add your handling code here:
         DB_Administrator admin = new DB_Administrator(
             jTextField4_username.getText(),
+            jTextField4_username.getText(),
             jTextField1_password.getText()
         );
 
@@ -246,6 +248,7 @@ public class Frame_Administrator extends javax.swing.JFrame {
         // TODO add your handling code here:
         DB_Administrator admin = new DB_Administrator(
             jTextField4_username.getText(),
+            jTextField4_username.getText(),
             jTextField1_password.getText()
         );
 
@@ -256,6 +259,7 @@ public class Frame_Administrator extends javax.swing.JFrame {
     private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
         // TODO add your handling code here:
         DB_Administrator admin = new DB_Administrator(
+            jTextField4_username.getText(),
             jTextField4_username.getText(),
             jTextField1_password.getText()
         );

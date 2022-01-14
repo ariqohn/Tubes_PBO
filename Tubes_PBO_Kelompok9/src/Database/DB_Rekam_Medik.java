@@ -22,12 +22,10 @@ public class DB_Rekam_Medik extends Rekam_Medik{
 
     //constructor
 
-    public DB_Rekam_Medik(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
-        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran);
+    public DB_Rekam_Medik(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
+        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran, noPembayaran);
     }
-    
-    
-    
+
     //Melakukan insert database Rekam Medik
     public void insert(){
         try {
@@ -118,13 +116,7 @@ public class DB_Rekam_Medik extends Rekam_Medik{
                 this.kode_dokter = rs.getString("kode_dokter");
                 this.kode_pasien = rs.getString("kode_pasien");
                 
-                list_rekam_medik.add(new Rekam_Medik(
-                        kode_pasien, 
-                        sql, 
-                        kode_pasien, 
-                        kode_terapi, 
-                        kode_pasien, 
-                        LocalDate.MIN));
+                list_rekam_medik.add(new Rekam_Medik(kode_pasien, sql, kode_pasien, kode_terapi, kode_pasien, LocalDate.MIN, Integer.BYTES));
              }
             stmt.close();
             conn.close();

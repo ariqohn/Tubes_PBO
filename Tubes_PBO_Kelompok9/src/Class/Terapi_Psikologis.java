@@ -11,13 +11,23 @@ package Class;
  */
 public class Terapi_Psikologis extends Terapi implements Biaya_Terapi{
     private String kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter;
+    private Integer biaya_terapi;
 
-    public Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String jenis_terapi, String jenis_penyakit, String deskripsi_penyakit) {
-        super(jenis_terapi, jenis_penyakit, deskripsi_penyakit);
+    public Terapi_Psikologis(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, Integer biaya_terapi, String jenis_terapi, String deskripsi_penyakit, String jenis_penyakit) {
+        super(jenis_terapi, deskripsi_penyakit, jenis_penyakit, kode_terapi);
         this.kode_terapi = kode_terapi;
         this.nama_terapi = nama_terapi;
         this.deskripsi_terapi = deskripsi_terapi;
         this.kode_dokter = kode_dokter;
+        this.biaya_terapi = biaya_terapi;
+    }
+
+    public Integer getBiaya_terapi() {
+        return biaya_terapi;
+    }
+
+    public void setBiaya_terapi(Integer biaya_terapi) {
+        this.biaya_terapi = biaya_terapi;
     }
     
     public void setKode_terapi(String kode_terapi){

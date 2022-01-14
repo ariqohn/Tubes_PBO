@@ -2,7 +2,6 @@ package GUI.Data;
 
 import GUI.Update.Frame_Home;
 import GUI.Update.Frame_Login;
-import GUI.Update.Frame_Terapi;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -242,9 +241,9 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
             jF.setVisible(true);
             setVisible(false);
         }else{
-            Frame_Terapi jF_1 = new Frame_Terapi();
-            jF_1.setVisible(true);
-            setVisible(false);
+//            Frame_Terapi jF_1 = new Frame_Terapi();
+//            jF_1.setVisible(true);
+//            setVisible(false);
         };
     }//GEN-LAST:event_jButton2MouseClicked
 

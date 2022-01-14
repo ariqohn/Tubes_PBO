@@ -21,10 +21,11 @@ public class DB_Pasien extends Pasien{
     
     private String kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien;
     private LocalDate tgl_pendaftaran;
+    private Integer noPembayaran;
 //    private Payment[] invoice;
-    
-    public DB_Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
-        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran);
+
+    public DB_Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran, Integer noPembayaran) {
+        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran, noPembayaran);
     }
 
     //Melakukan insert database Pasien
@@ -35,7 +36,7 @@ public class DB_Pasien extends Pasien{
                 "root", 
                 "");
             Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"')";
+            String sql = "INSERT INTO pasien VALUES('"+kode_pasien+"', '"+keluhan+"', '"+tgl_pendaftaran+"', '"+dokter_rujukan+"', '"+noPembayaran+"')";
             System.out.println(sql);
             stmt.execute(sql);
             stmt.close();
@@ -120,7 +121,7 @@ public class DB_Pasien extends Pasien{
                 
                 this.dokter_rujukan = rs.getString("dokter_rujukan");
                 
-                list_pasien.add(new Pasien(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran));
+                list_pasien.add(new Pasien(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran,noPembayaran));
              }
             stmt.close();
             conn.close();
