@@ -11,6 +11,7 @@ import GUI.Update.Frame_Home;
 import Database.DB_Terapi_Kimia;
 import Class.Terapi_Kimia;
 import GUI.Update.Frame_Login;
+import GUI.Update.Frame_TerapiKimia;
 import java.util.ArrayList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -263,8 +264,15 @@ public class Frame_DataTerapiKimia extends javax.swing.JFrame {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
         Frame_Login jF = new Frame_Login();
-        jF.setVisible(true);
-        setVisible(false);
+        System.out.println(jF.get_status());
+        if (jF.get_status() == false){
+            jF.setVisible(true);
+            setVisible(false);
+        }else{
+            Frame_TerapiKimia jF_1 = new Frame_TerapiKimia();
+            jF_1.setVisible(true);
+            setVisible(false);
+        }
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**

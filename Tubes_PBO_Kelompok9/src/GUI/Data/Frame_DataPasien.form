@@ -67,25 +67,25 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel_namaPenyakit" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel_keluhan" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel_dokterRujukan" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7_kodeterapi" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6_tanggal" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel9_nama" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
@@ -114,12 +114,12 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6_tanggal" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel9_nama" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -128,7 +128,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel_namaPenyakit" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_keluhan" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -139,7 +139,7 @@
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7_kodeterapi" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Component id="jButton2_edit" min="-2" max="-2" attributes="0"/>
@@ -171,7 +171,7 @@
             <Property name="text" type="java.lang.String" value="Kode Pasien      :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="jLabel7_kodeterapi">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -231,7 +231,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_backActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel_namaPenyakit">
+        <Component class="javax.swing.JLabel" name="jLabel_keluhan">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -261,13 +261,13 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Pasien pasien = new DB_Pasien(null, null, null, null, null, null);&#xa;ArrayList&lt;Pasien&gt; list_pasien = pasien.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Pasien e:list_pasien){&#xa;    Data_Jlist[i] = e.getKode_pasien();&#xa;    i=i+1;&#xa;}&#xa;&#xa;jList1_DataPasien.addListSelectionListener(new ListSelectionListener() {&#xa;            @Override&#xa;            public void valueChanged(ListSelectionEvent e) {&#xa;                if (!e.getValueIsAdjusting()){&#xa;                    for(Pasien i: list_pasien){&#xa;                        if (i.getKode_pasien() == jList1_DataPasien.getSelectedValue()){&#xa;                            jLabel_kodePasien.setText(i.getKode_pasien());&#xa;                        }&#xa;                    }&#xa;                }&#xa;            }&#xa;        });"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Pasien pasien = new DB_Pasien(null, null, null, null, null, null);&#xa;ArrayList&lt;Pasien&gt; list_pasien = pasien.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Pasien e:list_pasien){&#xa;    Data_Jlist[i] = e.getKode_pasien();&#xa;    i=i+1;&#xa;}&#xa;&#xa;jList1_DataPasien.addListSelectionListener(new ListSelectionListener() {&#xa;            @Override&#xa;            public void valueChanged(ListSelectionEvent e) {&#xa;                if (!e.getValueIsAdjusting()){&#xa;                    for(Pasien i: list_pasien){&#xa;                        if (i.getKode_pasien() == jList1_DataPasien.getSelectedValue()){&#xa;                            jLabel_kodePasien.setText(i.getKode_pasien());&#xa;                            LocalDate localDate = LocalDate.now();&#xa;                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;dd LLLL yyyy&quot;);&#xa;                            String formattedString = localDate.format(formatter);&#xa;                            jLabel6_tanggal.setText(formattedString);&#xa;                        &#xa;                            jLabel7_kodeterapi.setText(i.getKode_terapi());&#xa;                            jLabel9_nama.setText(i.getNama_pasien());&#xa;                            jLabel_dokterRujukan.setText(i.getDokter_rujukan());&#xa;                            jLabel_keluhan.setText(i.getKeluhan());&#xa;                            &#xa;                        }&#xa;                    }&#xa;                }&#xa;            }&#xa;        });"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="jLabel6_tanggal">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -275,7 +275,7 @@
             <Property name="text" type="java.lang.String" value="Tanggal"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="jLabel9_nama">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

@@ -3,6 +3,7 @@ package GUI.Data;
 import GUI.Update.Frame_Home;
 import Database.DB_Dokter;
 import Class.Dokter;
+import GUI.Update.Frame_Dokter;
 import GUI.Update.Frame_Login;
 import java.util.ArrayList;
 
@@ -225,8 +226,15 @@ public class Frame_DataDokter extends javax.swing.JFrame {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
         Frame_Login jF = new Frame_Login();
-        jF.setVisible(true);
-        setVisible(false);
+        System.out.println(jF.get_status());
+        if (jF.get_status() == false){
+            jF.setVisible(true);
+            setVisible(false);
+        }else{
+            Frame_Dokter jF_1 = new Frame_Dokter();
+            jF_1.setVisible(true);
+            setVisible(false);
+        }
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**

@@ -72,6 +72,14 @@ public class Pasien {
     public void setDokter_rujukan(String dokter_rujukan){
         this.dokter_rujukan = dokter_rujukan;
     }
+
+    public String getDokter_rujukan() {
+        return dokter_rujukan;
+    }
+
+    public String getNama_pasien() {
+        return nama_pasien;
+    }
     
     public void display(){
         System.out.println("Kode Pasien         :" + this.kode_pasien);
