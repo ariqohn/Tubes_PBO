@@ -8,6 +8,11 @@ import GUI.Update.Frame_Home;
  * and open the template in the editor.
  */
 
+import Database.DB_Administrator;
+import Class.Administrator;
+import GUI.Update.Frame_Administrator;
+import GUI.Update.Frame_Login;
+import java.util.ArrayList;
 
 /**
  *
@@ -34,12 +39,15 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jLabel4_Nama = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_dataAdministrator = new javax.swing.JTable();
         jLabel_username = new javax.swing.JLabel();
         jButton_back = new javax.swing.JButton();
         jLabel_password = new javax.swing.JLabel();
+        jButton3_editData = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,50 +60,21 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username      :");
 
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1);
+
+        jLabel4_Nama.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4_Nama.setText("Nama");
+
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Nama Admin :");
+
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password     :");
-
-        jTable_dataAdministrator.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Username", "Password"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable_dataAdministrator);
 
         jLabel_username.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_username.setText("Username");
@@ -116,6 +95,13 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jLabel_password.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_password.setText("Password");
 
+        jButton3_editData.setText("Edit Data");
+        jButton3_editData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3_editDataMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -125,22 +111,26 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton_back)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel_username))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(25, 25, 25)
-                        .addComponent(jLabel_password)))
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel_password))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(jLabel1)
-                        .addContainerGap(362, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4_Nama)
+                            .addComponent(jLabel_username))))
+                .addGap(139, 139, 139)
+                .addComponent(jLabel1)
+                .addContainerGap(362, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(215, 215, 215)
+                .addComponent(jButton3_editData)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(135, 135, 135))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,20 +139,24 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jButton_back))
+                .addGap(54, 54, 54)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4_Nama))
+                        .addGap(36, 36, 36)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel_username))
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_password)
-                            .addComponent(jLabel3)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(79, Short.MAX_VALUE))
+                            .addComponent(jLabel3))
+                        .addGap(106, 106, 106)
+                        .addComponent(jButton3_editData))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -189,6 +183,23 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton_backMouseClicked
+
+    private void jButton3_editDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_editDataMouseClicked
+        // TODO add your handling code here:
+        
+        Frame_Login jF = new Frame_Login();
+        System.out.println(jF.get_status());
+        if (jF.get_status() == false){
+            jF.setVisible(true);
+            setVisible(false);
+        }else{
+            Frame_Administrator jF_1 = new Frame_Administrator();
+            jF_1.setVisible(true);
+            setVisible(false);
+        }
+        
+        
+    }//GEN-LAST:event_jButton3_editDataMouseClicked
 
     /**
      * @param args the command line arguments
@@ -257,14 +268,17 @@ public class Frame_DataAdministrator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton3_editData;
     private javax.swing.JButton jButton_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4_Nama;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel_password;
     private javax.swing.JLabel jLabel_username;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable_dataAdministrator;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

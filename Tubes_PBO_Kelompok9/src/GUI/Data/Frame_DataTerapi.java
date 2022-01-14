@@ -1,6 +1,7 @@
 package GUI.Data;
 
 import GUI.Update.Frame_Home;
+import GUI.Update.Frame_Login;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -48,6 +49,7 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
         jLabel_jenisTerapi = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList1_DataTerapi = new javax.swing.JList<>();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,6 +115,13 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList1_DataTerapi);
 
+        jButton2.setText("Edit Data");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -120,39 +129,44 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton_back)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel_kodeTerapi))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel12)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel3)))
-                        .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton_back)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel_kodeTerapi))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(11, 11, 11)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel5)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel12)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(jLabel3)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_namaTerapi)
+                                    .addComponent(jLabel_deskripsiTerapi)
+                                    .addComponent(jLabel_kodeDokter)
+                                    .addComponent(jLabel_kodePasien)
+                                    .addComponent(jLabel_jenisTerapi))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_namaTerapi)
-                            .addComponent(jLabel_deskripsiTerapi)
-                            .addComponent(jLabel_kodeDokter)
-                            .addComponent(jLabel_kodePasien)
-                            .addComponent(jLabel_jenisTerapi))))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(125, 125, 125)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(309, 309, 309)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(309, 309, 309)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(203, 203, 203)
+                        .addComponent(jButton2)))
                 .addContainerGap(169, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -189,7 +203,9 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
                             .addComponent(jLabel_jenisTerapi)
                             .addComponent(jLabel12)))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(79, 79, 79))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -216,6 +232,13 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton_backMouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        Frame_Login jF = new Frame_Login();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -268,6 +291,7 @@ public class Frame_DataTerapi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;

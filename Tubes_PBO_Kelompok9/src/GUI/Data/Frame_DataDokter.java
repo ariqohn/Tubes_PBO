@@ -3,6 +3,7 @@ package GUI.Data;
 import GUI.Update.Frame_Home;
 import Database.DB_Dokter;
 import Class.Dokter;
+import GUI.Update.Frame_Login;
 import java.util.ArrayList;
 
 /*
@@ -48,6 +49,7 @@ public class Frame_DataDokter extends javax.swing.JFrame {
         jLabel_namaDokter = new javax.swing.JLabel();
         jLabel_emailDokter = new javax.swing.JLabel();
         jLabel_spesialis = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,6 +113,13 @@ public class Frame_DataDokter extends javax.swing.JFrame {
         jLabel_spesialis.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_spesialis.setText("Spesialis");
 
+        jButton2.setText("Edit Data");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -141,14 +150,17 @@ public class Frame_DataDokter extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel_spesialis)
                                     .addComponent(jLabel_namaDokter))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabel1)
                         .addContainerGap(452, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(212, 212, 212))))
         );
@@ -178,7 +190,9 @@ public class Frame_DataDokter extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel_spesialis)))
+                            .addComponent(jLabel_spesialis))
+                        .addGap(89, 89, 89)
+                        .addComponent(jButton2))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(123, Short.MAX_VALUE))
         );
@@ -207,6 +221,13 @@ public class Frame_DataDokter extends javax.swing.JFrame {
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton_backMouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        Frame_Login jF = new Frame_Login();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -247,6 +268,7 @@ public class Frame_DataDokter extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

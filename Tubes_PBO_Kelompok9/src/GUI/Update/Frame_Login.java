@@ -5,15 +5,25 @@
  */
 package GUI.Update;
 
+import Class.Administrator;
+import Database.DB_Administrator;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ASUS
  */
 public class Frame_Login extends javax.swing.JFrame {
-
+    public static boolean status_admin = false;
+    
     /**
      * Creates new form Frame_Login
      */
+    public boolean get_status(){
+        return status_admin;
+    }
+    
     public Frame_Login() {
         initComponents();
     }
@@ -30,10 +40,8 @@ public class Frame_Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1_Submit = new javax.swing.JButton();
         jButton2_Home = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        j_status = new javax.swing.JComboBox<>();
         jTextField2_Password = new javax.swing.JTextField();
         jTextField1_Username = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -46,7 +54,7 @@ public class Frame_Login extends javax.swing.JFrame {
 
         jButton1_Submit.setBackground(new java.awt.Color(0, 255, 255));
         jButton1_Submit.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton1_Submit.setText("Submit");
+        jButton1_Submit.setText("Login");
         jButton1_Submit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1_SubmitMouseClicked(evt);
@@ -64,11 +72,6 @@ public class Frame_Login extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 94, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Status");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
-
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
@@ -78,16 +81,13 @@ public class Frame_Login extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
-
-        j_status.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pasien", "Dokter", " " }));
-        jPanel1.add(j_status, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, 125, -1));
         jPanel1.add(jTextField2_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 450, -1));
         jPanel1.add(jTextField1_Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 450, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Login");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+        jLabel1.setText("Sign-in Administrator");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
@@ -96,14 +96,24 @@ public class Frame_Login extends javax.swing.JFrame {
 
     private void jButton1_SubmitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_SubmitMouseClicked
         // TODO add your handling code here:
-        String a = (String) j_status.getSelectedItem();
-        if(a == "Pasien"){
-            Frame_Pasien jF = new Frame_Pasien();
-            jF.setVisible(true);
-        } else {
-            Frame_Dokter jF_1 = new Frame_Dokter();
-            jF_1.setVisible(true);
+        String username = jTextField1_Username.getText();
+        String password = jTextField2_Password.getText();
+        DB_Administrator DB_admin = new DB_Administrator(null, null);
+        ArrayList<Administrator> admin = DB_admin.getData();
+        for (Administrator e: admin){
+            if (username.equals(e.getUsername()) && password.equals(e.getPassword())){
+                status_admin = true;
+                Frame_HomeAdmin jF = new Frame_HomeAdmin();
+                jF.setVisible(true);
+                setVisible(false);
+                JOptionPane.showMessageDialog(null, "Login Berhasil..");
+                break;
+            }
         }
+        if (status_admin==false){
+            JOptionPane.showMessageDialog(null, "Username atau Password Salah..");
+        }
+        
 
     }//GEN-LAST:event_jButton1_SubmitMouseClicked
 
@@ -155,10 +165,8 @@ public class Frame_Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1_Username;
     private javax.swing.JTextField jTextField2_Password;
-    private javax.swing.JComboBox<String> j_status;
     // End of variables declaration//GEN-END:variables
 }

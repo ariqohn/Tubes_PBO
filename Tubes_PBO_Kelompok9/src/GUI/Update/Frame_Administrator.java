@@ -5,14 +5,17 @@
  */
 package GUI.Update;
 
+import Database.DB_Administrator;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author Ariqoh Novitasari
+ * @author Naufal
  */
 public class Frame_Administrator extends javax.swing.JFrame {
 
     /**
-     * Creates new form Frame_Administrator
+     * Creates new form NewJFrame
      */
     public Frame_Administrator() {
         initComponents();
@@ -27,116 +30,239 @@ public class Frame_Administrator extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jColorChooser1 = new javax.swing.JColorChooser();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1_Login = new javax.swing.JButton();
-        jTextField1_Username = new javax.swing.JTextField();
-        jField2_Password = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1_password = new javax.swing.JTextField();
+        jTextField2_namaAdmin = new javax.swing.JTextField();
+        jTextField4_username = new javax.swing.JTextField();
+        jButton1_Back = new javax.swing.JButton();
+        jButton2_Add = new javax.swing.JButton();
+        jButton3_Delete = new javax.swing.JButton();
+        jButton4_Update = new javax.swing.JButton();
+        jButton1_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(233, 212, 96));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 60));
+        jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("LOGIN ADMINISTRATOR");
+        jLabel1.setFont(new java.awt.Font("News701 BT", 1, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("DATA ADMIN");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Nama Admin  :");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Username      :");
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Password       :");
+
+        jTextField1_password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1_passwordActionPerformed(evt);
+            }
+        });
+
+        jTextField2_namaAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2_namaAdminActionPerformed(evt);
+            }
+        });
+
+        jButton1_Back.setText("Back");
+        jButton1_Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_BackMouseClicked(evt);
+            }
+        });
+        jButton1_Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_BackActionPerformed(evt);
+            }
+        });
+
+        jButton2_Add.setText("add");
+        jButton2_Add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_AddMouseClicked(evt);
+            }
+        });
+        jButton2_Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2_AddActionPerformed(evt);
+            }
+        });
+
+        jButton3_Delete.setText("delete");
+        jButton3_Delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3_DeleteMouseClicked(evt);
+            }
+        });
+
+        jButton4_Update.setText("update");
+        jButton4_Update.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4_UpdateMouseClicked(evt);
+            }
+        });
+
+        jButton1_reset.setText("reset");
+        jButton1_reset.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1_resetMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jButton1_Back)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(252, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(249, 249, 249))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextField1_password, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+                                .addComponent(jTextField4_username, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jTextField2_namaAdmin)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jButton2_Add)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                        .addComponent(jButton1_reset)
+                        .addGap(83, 83, 83)
+                        .addComponent(jButton3_Delete)
+                        .addGap(209, 209, 209)
+                        .addComponent(jButton4_Update)))
+                .addGap(88, 88, 88))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap())
+                .addGap(349, 349, 349))
         );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 800, 60);
-
-        jPanel2.setBackground(new java.awt.Color(37, 41, 88));
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Password     :");
-
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Username    :");
-
-        jButton1_Login.setText("Login");
-        jButton1_Login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1_LoginActionPerformed(evt);
-            }
-        });
-
-        jTextField1_Username.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1_UsernameActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1_Username, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
-                            .addComponent(jField2_Password)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(364, 364, 364)
-                        .addComponent(jButton1_Login)))
-                .addContainerGap(224, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(145, 145, 145)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1_Back)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(90, 90, 90)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField2_namaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jField2_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100)
-                .addComponent(jButton1_Login)
-                .addContainerGap(154, Short.MAX_VALUE))
+                    .addComponent(jTextField4_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextField1_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(148, 148, 148)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2_Add)
+                    .addComponent(jButton3_Delete)
+                    .addComponent(jButton4_Update)
+                    .addComponent(jButton1_reset))
+                .addGap(77, 77, 77))
         );
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 50, 800, 550);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1_UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_UsernameActionPerformed
+    private void jTextField1_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_passwordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1_UsernameActionPerformed
+    }//GEN-LAST:event_jTextField1_passwordActionPerformed
 
-    private void jButton1_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_LoginActionPerformed
+    private void jTextField2_namaAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2_namaAdminActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1_LoginActionPerformed
+    }//GEN-LAST:event_jTextField2_namaAdminActionPerformed
+
+    private void jButton1_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_BackMouseClicked
+        // TODO add your handling code here:
+        Frame_Home jF = new Frame_Home();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton1_BackMouseClicked
+
+    private void jButton1_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_BackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1_BackActionPerformed
+
+    private void jButton2_AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_AddMouseClicked
+        // TODO add your handling code here:
+        DB_Administrator admin = new DB_Administrator(
+            jTextField4_username.getText(),
+            jTextField1_password.getText()
+        );
+
+        admin.insert();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
+    }//GEN-LAST:event_jButton2_AddMouseClicked
+
+    private void jButton2_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_AddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2_AddActionPerformed
+
+    private void jButton3_DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_DeleteMouseClicked
+        // TODO add your handling code here:
+        DB_Administrator admin = new DB_Administrator(
+            jTextField4_username.getText(),
+            jTextField1_password.getText()
+        );
+
+        admin.delete();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
+    }//GEN-LAST:event_jButton3_DeleteMouseClicked
+
+    private void jButton4_UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_UpdateMouseClicked
+        // TODO add your handling code here:
+        DB_Administrator admin = new DB_Administrator(
+            jTextField4_username.getText(),
+            jTextField1_password.getText()
+        );
+
+        admin.update();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
+    }//GEN-LAST:event_jButton4_UpdateMouseClicked
+
+    private void jButton1_resetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_resetMouseClicked
+        // TODO add your handling code here:
+        DB_Administrator admin = new DB_Administrator(
+            jTextField4_username.getText(),
+            jTextField1_password.getText()
+        );
+
+        admin.reset();
+        JOptionPane.showMessageDialog(null, "Data Berhasil Direset..");
+    }//GEN-LAST:event_jButton1_resetMouseClicked
 
     /**
      * @param args the command line arguments
@@ -164,6 +290,7 @@ public class Frame_Administrator extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Frame_Administrator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -174,14 +301,18 @@ public class Frame_Administrator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1_Login;
-    private javax.swing.JColorChooser jColorChooser1;
-    private javax.swing.JPasswordField jField2_Password;
+    private javax.swing.JButton jButton1_Back;
+    private javax.swing.JButton jButton1_reset;
+    private javax.swing.JButton jButton2_Add;
+    private javax.swing.JButton jButton3_Delete;
+    private javax.swing.JButton jButton4_Update;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1_Username;
+    private javax.swing.JTextField jTextField1_password;
+    private javax.swing.JTextField jTextField2_namaAdmin;
+    private javax.swing.JTextField jTextField4_username;
     // End of variables declaration//GEN-END:variables
 }

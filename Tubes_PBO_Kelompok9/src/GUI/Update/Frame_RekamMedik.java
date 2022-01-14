@@ -46,6 +46,7 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
         jTextField3_NamaTerapi = new javax.swing.JTextField();
         jTextField4_DeskripsiTerapi = new javax.swing.JTextField();
         jTextField5_KodeTerapi = new javax.swing.JTextField();
+        jButton1_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,6 +104,8 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
             }
         });
 
+        jButton1_reset.setText("reset");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -125,7 +128,9 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
                     .addComponent(jTextField5_KodeTerapi, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2_Add)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton1_reset)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                         .addComponent(jButton3_Delete)
                         .addGap(161, 161, 161)
                         .addComponent(jButton4_Update))
@@ -166,7 +171,8 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2_Add)
                     .addComponent(jButton3_Delete)
-                    .addComponent(jButton4_Update))
+                    .addComponent(jButton4_Update)
+                    .addComponent(jButton1_reset))
                 .addGap(42, 42, 42))
         );
 
@@ -258,6 +264,7 @@ public class Frame_RekamMedik extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1_Back;
+    private javax.swing.JButton jButton1_reset;
     private javax.swing.JButton jButton2_Add;
     private javax.swing.JButton jButton3_Delete;
     private javax.swing.JButton jButton4_Update;

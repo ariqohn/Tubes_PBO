@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Zenbook
+ * @author Naufal
  */
 public class Frame_Dokter extends javax.swing.JFrame {
 
     /**
-     * Creates new form Frame_Dokter
+     * Creates new form Test
      */
     public Frame_Dokter() {
         initComponents();
@@ -44,9 +44,9 @@ public class Frame_Dokter extends javax.swing.JFrame {
         jButton2_Add = new javax.swing.JButton();
         jButton3_Delete = new javax.swing.JButton();
         jButton4_Update = new javax.swing.JButton();
+        jButton1_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
 
@@ -116,6 +116,8 @@ public class Frame_Dokter extends javax.swing.JFrame {
             }
         });
 
+        jButton1_reset.setText("reset");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -143,7 +145,9 @@ public class Frame_Dokter extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(114, 114, 114)
                         .addComponent(jButton2_Add)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 269, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                        .addComponent(jButton1_reset)
+                        .addGap(83, 83, 83)
                         .addComponent(jButton3_Delete)
                         .addGap(209, 209, 209)
                         .addComponent(jButton4_Update)))
@@ -168,7 +172,7 @@ public class Frame_Dokter extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField4_NamaDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField1_EmailDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -180,7 +184,8 @@ public class Frame_Dokter extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2_Add)
                     .addComponent(jButton3_Delete)
-                    .addComponent(jButton4_Update))
+                    .addComponent(jButton4_Update)
+                    .addComponent(jButton1_reset))
                 .addGap(77, 77, 77))
         );
 
@@ -188,31 +193,23 @@ public class Frame_Dokter extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2_KodeDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2_KodeDokterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2_KodeDokterActionPerformed
-
     private void jTextField1_EmailDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_EmailDokterActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1_EmailDokterActionPerformed
 
-    private void jButton1_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_BackActionPerformed
+    private void jTextField2_KodeDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2_KodeDokterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1_BackActionPerformed
-
-    private void jButton2_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_AddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2_AddActionPerformed
+    }//GEN-LAST:event_jTextField2_KodeDokterActionPerformed
 
     private void jButton1_BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1_BackMouseClicked
         // TODO add your handling code here:
@@ -221,28 +218,36 @@ public class Frame_Dokter extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_jButton1_BackMouseClicked
 
+    private void jButton1_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_BackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1_BackActionPerformed
+
     private void jButton2_AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_AddMouseClicked
         // TODO add your handling code here:
         DB_Dokter dokter = new DB_Dokter(
-                jTextField2_KodeDokter.getText(), 
-                jTextField4_NamaDokter.getText(), 
-                jTextField1_EmailDokter.getText(), 
-                jTextField3_Spesialis.getText()
+            jTextField2_KodeDokter.getText(),
+            jTextField4_NamaDokter.getText(),
+            jTextField1_EmailDokter.getText(),
+            jTextField3_Spesialis.getText()
         );
-                
-        dokter.insert(); 
+
+        dokter.insert();
         JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan..");
     }//GEN-LAST:event_jButton2_AddMouseClicked
+
+    private void jButton2_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_AddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2_AddActionPerformed
 
     private void jButton3_DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3_DeleteMouseClicked
         // TODO add your handling code here:
         DB_Dokter dokter = new DB_Dokter(
-                jTextField2_KodeDokter.getText(), 
-                jTextField4_NamaDokter.getText(), 
-                jTextField1_EmailDokter.getText(), 
-                jTextField3_Spesialis.getText()
+            jTextField2_KodeDokter.getText(),
+            jTextField4_NamaDokter.getText(),
+            jTextField1_EmailDokter.getText(),
+            jTextField3_Spesialis.getText()
         );
-                
+
         dokter.delete();
         JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus..");
     }//GEN-LAST:event_jButton3_DeleteMouseClicked
@@ -250,12 +255,12 @@ public class Frame_Dokter extends javax.swing.JFrame {
     private void jButton4_UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4_UpdateMouseClicked
         // TODO add your handling code here:
         DB_Dokter dokter = new DB_Dokter(
-                jTextField2_KodeDokter.getText(), 
-                jTextField4_NamaDokter.getText(), 
-                jTextField1_EmailDokter.getText(), 
-                jTextField3_Spesialis.getText()
+            jTextField2_KodeDokter.getText(),
+            jTextField4_NamaDokter.getText(),
+            jTextField1_EmailDokter.getText(),
+            jTextField3_Spesialis.getText()
         );
-                
+
         dokter.update();
         JOptionPane.showMessageDialog(null, "Data Berhasil Diupdate..");
     }//GEN-LAST:event_jButton4_UpdateMouseClicked
@@ -286,6 +291,7 @@ public class Frame_Dokter extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Frame_Dokter.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -297,6 +303,7 @@ public class Frame_Dokter extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1_Back;
+    private javax.swing.JButton jButton1_reset;
     private javax.swing.JButton jButton2_Add;
     private javax.swing.JButton jButton3_Delete;
     private javax.swing.JButton jButton4_Update;

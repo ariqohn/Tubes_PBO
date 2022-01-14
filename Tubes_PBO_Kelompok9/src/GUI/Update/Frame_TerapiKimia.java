@@ -48,6 +48,7 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         b_update = new javax.swing.JButton();
         b_delete = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jButton1_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -145,6 +146,26 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
         getContentPane().add(b_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 91, -1));
 
         jPanel1.setBackground(new java.awt.Color(37, 41, 88));
+
+        jButton1_reset.setText("reset");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(256, 256, 256)
+                .addComponent(jButton1_reset)
+                .addContainerGap(483, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(515, Short.MAX_VALUE)
+                .addComponent(jButton1_reset)
+                .addGap(60, 60, 60))
+        );
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
@@ -253,6 +274,7 @@ public class Frame_TerapiKimia extends javax.swing.JFrame {
     private javax.swing.JButton b_update;
     private javax.swing.JComboBox<String> biaya_terapi;
     private javax.swing.JTextField deskripsi_terapi;
+    private javax.swing.JButton jButton1_reset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

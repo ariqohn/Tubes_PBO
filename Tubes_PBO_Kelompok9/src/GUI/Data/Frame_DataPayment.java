@@ -11,6 +11,7 @@ import GUI.Update.Frame_Home;
 import GUI.Update.Frame_Home;
 import Database.DB_Payment;
 import Class.Payment;
+import GUI.Update.Frame_Login;
 import java.util.ArrayList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -50,6 +51,7 @@ public class Frame_DataPayment extends javax.swing.JFrame {
         jLabel_noPembayaran = new javax.swing.JLabel();
         jLabel_deskripsiPembayaran = new javax.swing.JLabel();
         jLabel_metodePembayaran = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,6 +126,13 @@ public class Frame_DataPayment extends javax.swing.JFrame {
         jLabel_metodePembayaran.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_metodePembayaran.setText("Metode");
 
+        jButton2.setText("Edit Data");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -154,15 +163,15 @@ public class Frame_DataPayment extends javax.swing.JFrame {
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel_deskripsiPembayaran)))))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(jLabel1)
-                        .addContainerGap(384, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(153, 153, 153))))
+                .addGap(139, 139, 139)
+                .addComponent(jLabel1)
+                .addContainerGap(384, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(156, 156, 156)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(153, 153, 153))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,7 +197,9 @@ public class Frame_DataPayment extends javax.swing.JFrame {
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_metodePembayaran)
-                            .addComponent(jLabel6)))
+                            .addComponent(jLabel6))
+                        .addGap(129, 129, 129)
+                        .addComponent(jButton2))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(107, Short.MAX_VALUE))
         );
@@ -217,6 +228,13 @@ public class Frame_DataPayment extends javax.swing.JFrame {
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton_backMouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        Frame_Login jF = new Frame_Login();
+        jF.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -285,6 +303,7 @@ public class Frame_DataPayment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -17,20 +17,16 @@ import java.util.ArrayList;
  *
  * @author Naufal
  */
-public class DB_Pasien {
-    private String kode_pasien, keluhan, dokter_rujukan, kode_terapi;
-    private LocalDate tgl_pendaftaran;
-    private Payment[] invoice;
-
-    //constructor
-    public DB_Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, LocalDate tgl_pendaftaran) {
-        this.kode_pasien = kode_pasien;
-        this.keluhan = keluhan;
-        this.dokter_rujukan = dokter_rujukan;
-        this.kode_terapi = kode_terapi;
-        this.tgl_pendaftaran = tgl_pendaftaran;
-    }
+public class DB_Pasien extends Pasien{
     
+    private String kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien;
+    private LocalDate tgl_pendaftaran;
+//    private Payment[] invoice;
+    
+    public DB_Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
+        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran);
+    }
+
     //Melakukan insert database Pasien
     public void insert(){
         try {
@@ -124,7 +120,7 @@ public class DB_Pasien {
                 
                 this.dokter_rujukan = rs.getString("dokter_rujukan");
                 
-                list_pasien.add(new Pasien(kode_pasien, keluhan, dokter_rujukan, tgl_pendaftaran));
+                list_pasien.add(new Pasien(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran));
              }
             stmt.close();
             conn.close();
@@ -135,9 +131,9 @@ public class DB_Pasien {
     }
     
     public static void main(String[] args) {
-        DB_Pasien test = new DB_Pasien("PAS09", "demam, muntah", "Nama dokter", "TP1", LocalDate.now());
-        test.reset();
-        System.out.println();
-        System.out.println("berhasil");
+//        DB_Pasien test = new DB_Pasien("PAS09", "demam, muntah", "Nama dokter", "TP1", LocalDate.now());
+//        test.reset();
+//        System.out.println();
+//        System.out.println("berhasil");
     }
 }

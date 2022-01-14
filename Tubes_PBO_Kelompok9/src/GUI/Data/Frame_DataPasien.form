@@ -88,18 +88,16 @@
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="426" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="214" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="426" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+                  <Component id="jButton2_edit" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="214" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -143,10 +141,12 @@
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                          <Component id="jButton2_edit" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane2" min="-2" pref="395" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="98" max="32767" attributes="0"/>
+                  <EmptySpace pref="78" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -261,7 +261,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Pasien pasien = new DB_Pasien(null, null, null, null, null);&#xa;ArrayList&lt;Pasien&gt; list_pasien = pasien.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Pasien e:list_pasien){&#xa;    Data_Jlist[i] = e.getKode_pasien();&#xa;    i=i+1;&#xa;}&#xa;&#xa;jList1_DataPasien.addListSelectionListener(new ListSelectionListener() {&#xa;            @Override&#xa;            public void valueChanged(ListSelectionEvent e) {&#xa;                if (!e.getValueIsAdjusting()){&#xa;                    for(Pasien i: list_pasien){&#xa;                        if (i.getKode_pasien() == jList1_DataPasien.getSelectedValue()){&#xa;                            jLabel_kodePasien.setText(i.getKode_pasien());&#xa;                        }&#xa;                    }&#xa;                }&#xa;            }&#xa;        });"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DB_Pasien pasien = new DB_Pasien(null, null, null, null, null, null);&#xa;ArrayList&lt;Pasien&gt; list_pasien = pasien.getData();&#xa;String[] Data_Jlist = new String[100];&#xa;int i = 0;&#xa;for(Pasien e:list_pasien){&#xa;    Data_Jlist[i] = e.getKode_pasien();&#xa;    i=i+1;&#xa;}&#xa;&#xa;jList1_DataPasien.addListSelectionListener(new ListSelectionListener() {&#xa;            @Override&#xa;            public void valueChanged(ListSelectionEvent e) {&#xa;                if (!e.getValueIsAdjusting()){&#xa;                    for(Pasien i: list_pasien){&#xa;                        if (i.getKode_pasien() == jList1_DataPasien.getSelectedValue()){&#xa;                            jLabel_kodePasien.setText(i.getKode_pasien());&#xa;                        }&#xa;                    }&#xa;                }&#xa;            }&#xa;        });"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -290,6 +290,14 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Nama Pasien   : "/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton2_edit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit Data"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2_editMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

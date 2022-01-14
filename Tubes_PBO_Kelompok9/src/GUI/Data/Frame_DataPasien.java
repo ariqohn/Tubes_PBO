@@ -3,6 +3,7 @@ package GUI.Data;
 import GUI.Update.Frame_Home;
 import Database.DB_Pasien;
 import Class.Pasien;
+import GUI.Update.Frame_Login;
 import java.util.ArrayList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -53,6 +54,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jButton2_edit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,7 +104,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jLabel_dokterRujukan.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_dokterRujukan.setText("Dokter Rujukan");
 
-        DB_Pasien pasien = new DB_Pasien(null, null, null, null, null);
+        DB_Pasien pasien = new DB_Pasien(null, null, null, null, null, null);
         ArrayList<Pasien> list_pasien = pasien.getData();
         String[] Data_Jlist = new String[100];
         int i = 0;
@@ -138,6 +140,13 @@ public class Frame_DataPasien extends javax.swing.JFrame {
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Nama Pasien   : ");
+
+        jButton2_edit.setText("Edit Data");
+        jButton2_edit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2_editMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -176,15 +185,15 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                         .addComponent(jLabel10)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel9)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(jLabel1)
-                        .addContainerGap(426, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(161, 161, 161))))
+                .addGap(125, 125, 125)
+                .addComponent(jLabel1)
+                .addContainerGap(426, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(202, 202, 202)
+                .addComponent(jButton2_edit)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(161, 161, 161))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,9 +227,11 @@ public class Frame_DataPasien extends javax.swing.JFrame {
                         .addGap(47, 47, 47)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(jLabel7)))
+                            .addComponent(jLabel7))
+                        .addGap(58, 58, 58)
+                        .addComponent(jButton2_edit))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -247,6 +258,13 @@ public class Frame_DataPasien extends javax.swing.JFrame {
         jF.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton_backMouseClicked
+
+    private void jButton2_editMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2_editMouseClicked
+        // TODO add your handling code here:
+        Frame_Login jF_2 = new Frame_Login();
+        jF_2.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2_editMouseClicked
 
     /**
      * @param args the command line arguments
@@ -315,6 +333,7 @@ public class Frame_DataPasien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2_edit;
     private javax.swing.JButton jButton_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

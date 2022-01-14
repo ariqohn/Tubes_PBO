@@ -15,17 +15,19 @@ import java.time.LocalDate;
  * @author Naufal
  */
 public class Pasien {
-    private String kode_pasien, keluhan, dokter_rujukan, kode_terapi;
+    private String kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien;
     private LocalDate tgl_pendaftaran;
-    private Payment[] invoice;
+    //private Payment[] invoice;
 
-    public Pasien(String kode_pasien, String keluhan, String dokter_rujukan, LocalDate tgl_pendaftaran) {
+    public Pasien(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
         this.kode_pasien = kode_pasien;
         this.keluhan = keluhan;
         this.dokter_rujukan = dokter_rujukan;
+        this.kode_terapi = kode_terapi;
+        this.nama_pasien = nama_pasien;
         this.tgl_pendaftaran = tgl_pendaftaran;
-        this.invoice = invoice;
     }
+
     
     public void setKode_pasien(String kode_pasien){
         this.kode_pasien = kode_pasien;
@@ -55,13 +57,13 @@ public class Pasien {
         return kode_terapi;
     }
 
-    public void setInvoice(Payment[] invoice) {
-        this.invoice = invoice;
-    }
-
-    public Payment[] getInvoice(){
-        return invoice;
-    }
+//    public void setInvoice(Payment[] invoice) {
+//        this.invoice = invoice;
+//    }
+//
+//    public Payment[] getInvoice(){
+//        return invoice;
+//    }
     
     public LocalDate getTgl_pendaftaran(){
         return tgl_pendaftaran;

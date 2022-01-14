@@ -46,6 +46,7 @@ public class Frame_Terapi extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         b_update = new javax.swing.JButton();
+        jButton1_reset = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -161,12 +162,16 @@ public class Frame_Terapi extends javax.swing.JFrame {
             }
         });
 
+        jButton1_reset.setText("reset");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(663, Short.MAX_VALUE)
+                .addGap(245, 245, 245)
+                .addComponent(jButton1_reset)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
                 .addComponent(b_update, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
         );
@@ -174,7 +179,9 @@ public class Frame_Terapi extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(528, Short.MAX_VALUE)
-                .addComponent(b_update)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(b_update)
+                    .addComponent(jButton1_reset))
                 .addGap(47, 47, 47))
         );
 
@@ -259,6 +266,7 @@ public class Frame_Terapi extends javax.swing.JFrame {
     private javax.swing.JButton b_delete;
     private javax.swing.JButton b_update;
     private javax.swing.JTextField deskripsi_terapi;
+    private javax.swing.JButton jButton1_reset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

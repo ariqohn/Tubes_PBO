@@ -72,6 +72,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jButton2_Add" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                  <Component id="jButton1_reset" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jButton3_Delete" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
@@ -135,6 +137,7 @@
                       <Component id="jButton2_Add" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton3_Delete" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton4_Update" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton1_reset" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
               </Group>
@@ -235,6 +238,11 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton4_UpdateMouseClicked"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1_reset">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="reset"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

@@ -17,18 +17,16 @@ import java.util.ArrayList;
  *
  * @author kamil
  */
-public class DB_Rekam_Medik extends Pasien{
+public class DB_Rekam_Medik extends Rekam_Medik{
     private String kode_terapi,nama_terapi,deskripsi_terapi,kode_dokter, kode_pasien;
 
     //constructor
-    public DB_Rekam_Medik(String kode_terapi, String nama_terapi, String deskripsi_terapi, String kode_dokter, String kode_pasien, String penyakit, String dokter_rujukan, LocalDate tgl_pendaftaran) {
-        super(kode_pasien, penyakit, dokter_rujukan, tgl_pendaftaran);
-        this.kode_terapi = kode_terapi;
-        this.nama_terapi = nama_terapi;
-        this.deskripsi_terapi = deskripsi_terapi;
-        this.kode_dokter = kode_dokter;
-        this.kode_pasien = kode_pasien;
+
+    public DB_Rekam_Medik(String kode_pasien, String keluhan, String dokter_rujukan, String kode_terapi, String nama_pasien, LocalDate tgl_pendaftaran) {
+        super(kode_pasien, keluhan, dokter_rujukan, kode_terapi, nama_pasien, tgl_pendaftaran);
     }
+    
+    
     
     //Melakukan insert database Rekam Medik
     public void insert(){
@@ -120,7 +118,13 @@ public class DB_Rekam_Medik extends Pasien{
                 this.kode_dokter = rs.getString("kode_dokter");
                 this.kode_pasien = rs.getString("kode_pasien");
                 
-                list_rekam_medik.add(new Rekam_Medik(kode_terapi, nama_terapi, deskripsi_terapi, kode_dokter, kode_pasien, sql, kode_pasien, LocalDate.MIN));
+                list_rekam_medik.add(new Rekam_Medik(
+                        kode_pasien, 
+                        sql, 
+                        kode_pasien, 
+                        kode_terapi, 
+                        kode_pasien, 
+                        LocalDate.MIN));
              }
             stmt.close();
             conn.close();
